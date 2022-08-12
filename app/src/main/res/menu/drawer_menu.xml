@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:title="@string/drawer_nav_bar_category_general">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_drawer_item_home"
+                android:icon="@drawable/ic_global"
+                android:title="@string/drawer_nav_bar_item_problems" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/drawer_nav_bar_category_account">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_drawer_item_submissions"
+                    android:icon="@drawable/ic_file_form"
+                    android:title="@string/drawer_nav_bar_item_submits" />
+                <item
+                    android:id="@+id/nav_drawer_item_profile"
+                    android:icon="@drawable/ic_user_circle"
+                    android:title="@string/drawer_nav_bar_item_my_account" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/drawer_nav_bar_category_other">
+        <menu>
+            <group android:checkableBehavior="single">
+            <!--<item
+                android:id="@+id/nav_drawer_item_settings"
+                android:icon="@drawable/ic_gear"
+                android:title="@string/drawer_nav_bar_item_settings" />-->
+            <item
+                android:id="@+id/nav_drawer_item_exit"
+                android:icon="@drawable/ic_exit"
+                android:title="@string/drawer_nav_bar_item_exit" />
+            </group>
+        </menu>
+    </item>
+</menu>

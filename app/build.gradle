@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.unipi.mpsp21043.citytrouble"
+        minSdkVersion 27
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            resValue "string", "versionName",
+                    "${defaultConfig.versionName}"
+        }
+        debug {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources false
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            versionNameSuffix ".debug"
+            resValue "string", "versionName",
+                    "${defaultConfig.versionName}${versionNameSuffix}"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    namespace 'com.unipi.mpsp21043.citytrouble'
+}
+
+dependencies {
+    /**
+     * Core Libraries
+     */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Views
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    /**
+     * Firebase
+     */
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+
+    // Dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-firestore:24.2.2'
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.1'  // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.1'  // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-storage:8.0.1'  // FirebaseUI for Cloud Storage
+    // Dependency for the Firebase Authentication library
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    // Dependency for the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics'
+
+
+    /**
+     * Extra Libraries
+     */
+    // implementation 'com.orhanobut:hawk:2.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation "com.github.skydoves:androidveil:1.1.2"
+    implementation 'com.hbb20:ccp:2.6.0'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'// Country Code Picker
+
+    /**
+     * Annotations
+     */
+    kapt 'com.github.bumptech.glide:compiler:4.13.2'
+}

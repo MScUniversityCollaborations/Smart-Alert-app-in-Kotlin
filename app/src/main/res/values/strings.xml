@@ -1,0 +1,215 @@
+<resources>
+    <string name="app_name">City Trouble</string>
+
+    <!-- System Strings-->
+    <string name="db_field_date_created">dateCreated</string>
+    <string name="db_field_date_completed">categoryId</string>
+
+    <!-- Currency -->
+    <string name="curr_eur">€</string>
+    <string name="curr_gbp">£</string>
+    <string name="curr_usd">$</string>
+
+    <!-- Activity/Fragment Labels -->
+    <string name="label_activity_sign_in_with_phone_number">Add a number</string>
+    <string name="label_activity_sign_in_with_phone_number_verification">Verify number</string>
+    <string name="label_activity_notifications">Notifications</string>
+
+    <!-- Tabs -->
+    <string name="tab_pending">Pending</string>
+    <string name="tab_completed">Completed</string>
+
+    <!-- Buttons -->
+    <string name="button_sign_in">Sign In</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="button_sign_in_phone">Continue with phone number</string>
+    <string name="button_sign_in_google">Continue with google account</string>
+    <string name="button_send">Send</string>
+    <string name="button_verify">Verify</string>
+    <string name="button_resend">Resend</string>
+    <string name="button_dismiss">Dismiss</string>
+    <string name="button_try_again">Try Again</string>
+    <string name="button_resend_in">Resend in %1$ss</string>
+
+    <!-- Add a submission -->
+    <string name="txt_add_a_submission">Add a submission</string>
+
+    <!-- Text Views -->
+    <string name="txt_welcome">Welcome</string>
+    <string name="txt_nav_header_sign_in">Sign in or create a new account.</string>
+    <string name="txt_congratulations">Congratulations!</string>
+    <string name="txt_congratulations_2">Your account has been
+        created successfully! You can now
+        continue using eMarket.</string>
+    <string name="txt_you_are_offline">You\'re Offline!</string>
+    <string name="txt_you_are_offline_2">Check your internet connection and try again.</string>
+    <string name="txt_Step_1">Add
+        your number</string>
+    <string name="txt_Step_2">Verify
+        your number</string>
+    <string name="txt_Step_3">Enter your
+        personal details</string>
+    <string name="txt_no_notifications">No notifications!</string>
+    <string name="txt_no_notifications_2">New notifications will appear here.</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_clear_all">Clear all</string>
+    <string name="txt_clear">Clear</string>
+    <string name="txt_today">Today</string>
+    <string name="txt_yesterday">Yesterday</string>
+    <string name="txt_last_week">Last week</string>
+    <string name="txt_sec_ago">sec ago</string>
+    <string name="txt_min_ago">min ago</string>
+    <string name="txt_day_ago">day ago</string>
+    <string name="txt_days_ago">days ago</string>
+    <string name="txt_address">Address</string>
+    <string name="txt_loading">Loading…</string>
+    <string name="txt_empty_cart">Your cart is empty!</string>
+    <string name="txt_empty_cart_2">Looks like you haven\'t made your choice yet 😢</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_phone_number">Phone Number</string>
+    <string name="txt_street_address">Street address</string>
+    <string name="txt_zip_code">Zip code</string>
+    <string name="txt_country">Country</string>
+    <string name="txt_street_number">Street Number</string>
+    <string name="txt_type">Type</string>
+    <string name="txt_house_">House</string>
+    <string name="txt_apartment">Apartment</string>
+    <string name="txt_other">Other</string>
+
+    <string name="txt_error_registration_failed">An error has occurred with registration, please contact our support team.</string>
+    <string name="txt_error_empty_name">Please enter your full name.</string>
+    <string name="txt_error_empty_password">Please enter your password.</string>
+    <string name="txt_error_empty_email">Please enter your email.</string>
+    <string name="txt_error_empty_phone">Please enter your phone number.</string>
+    <string name="txt_error_empty_address">Please enter your address.</string>
+    <string name="txt_error_empty_zip_code">Please enter your zip code.</string>
+    <string name="txt_error_empty_location">Please enter your location.</string>
+    <string name="txt_error_empty_category">Please select a category for the problem.</string>
+    <string name="txt_error_empty_description">Please enter details about the problem.</string>
+    <string name="txt_error_empty_image">Please upload a picture of the event.</string>
+
+    <string name="txt_please_wait">Please wait…</string>
+    <string name="txt_please_click_back_again_to_exit">Please click back again to exit.</string>
+    <string name="txt_password_reset_mail_sent">Email sent successfully to reset your password!</string>
+    <string name="txt_format_phone">+%1$s %2$s</string>
+    <string name="txt_format_address">%1$s, %2$s</string>
+
+    <!-- Input Texts -->
+    <string name="input_txt_hint_phone_number">Your mobile number</string>
+    <string name="input_txt_hint_full_name">Your full name</string>
+    <string name="input_txt_hint_address">Your address</string>
+    <string name="input_txt_hint_zip_code">Your zip code</string>
+
+    <!-- Welcome Activity -->
+    <string name="welcome_act_header">Welcome to\n<b>City Trouble</b>!</string>
+
+    <!-- Sign In Activity -->
+    <string name="sign_in_act_header">Sign-In</string>
+    <string name="sign_in_act_header_2">Enter your email and password to continue.</string>
+    <string name="sign_in_act_or">Or login with</string>
+
+    <!-- Sign In With Phone Activity -->
+    <string name="sign_in_phone_act_header">What\&apos;s your phone number?</string>
+    <string name="sign_in_phone_act_header_2">Enter your phone number to continue</string>
+    <string name="sign_in_phone_verification_act_header">Verify your number</string>
+    <string name="sign_in_phone_verification_act_header_2">4 digit code sent to <b>+%1$s</b></string>
+
+    <!-- Fill Account Info Activity -->
+    <string name="fill_acc_info_act_header">Fill your details</string>
+    <string name="fill_acc_info_act_header_2">Enter your personal details to continue</string>
+    <string name="fill_acc_info_act_or">OR</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- Fragment Home -->
+    <string name="txt_categories">Categories</string>
+    <string name="txt_deals">Deals</string>
+    <string name="txt_popular">Popular</string>
+    <string name="txt_view_all">View all</string>
+
+    <!-- Main Action Bar -->
+    <string name="txt_my_account">My Account</string>
+
+    <!-- ~~~~~~~NAV BAR~~~~~~~ -->
+    <string name="nav_drawer_open">Open</string>
+    <string name="nav_drawer_close">Close</string>
+    <string name="drawer_nav_bar_category_general">General</string>
+    <string name="drawer_nav_bar_item_problems">Problems</string>
+    <string name="drawer_nav_bar_category_account">Account</string>
+    <string name="drawer_nav_bar_item_my_account">My Account</string>
+    <string name="drawer_nav_bar_item_submits">My Submissions</string>
+    <string name="drawer_nav_bar_category_other">Other</string>
+    <string name="drawer_nav_bar_item_settings">Settings</string>
+    <string name="drawer_nav_bar_item_exit">Exit</string>
+
+    <string name="input_txt_hint_dash">-</string>
+    <string name="txt_account_info">Account Info</string>
+    <string name="txt_edit_profile">Edit Profile</string>
+    <string name="txt_check_again_another_time">Check again another time.</string>
+    <string name="txt_no_description">No description.</string>
+    <string name="txt_dismiss">DISMISS</string>
+    <string name="input_txt_hint_email">Your email address</string>
+    <string name="input_txt_hint_password">Your password</string>
+    <string name="input_txt_hint_description">Please enter the details about the problem here.</string>
+    <string name="input_txt_hint_date_found">Date that the problem has been found.</string>
+    <string name="input_txt_hint_location">Select the location of the problem.</string>
+    <string name="input_txt_hint_category">Select the category of the problem.</string>
+    <string name="txt_forgot_password_question">Forgot password?</string>
+    <string name="txt_forgot_password">Forgot password</string>
+    <string name="txt_lets_get_started">Let\'s get started</string>
+    <string name="input_txt_hint_name">Your name</string>
+    <string name="txt_enter_email_address_to_send_reset_code">Enter email address to send reset code.</string>
+    <string name="txt_password_reset">Password Reset</string>
+    <string name="txt_already_have_an_account">Already have an account? <b>Sign In</b></string>
+    <string name="txt_don_t_have_an_account">Don\'t have an account? <b>Sign Up</b></string>
+    <string name="txt_update_profile">Update Profile</string>
+    <string name="txt_must_sign_in_2">You must sign in to see this.</string>
+    <string name="txt_must_sign_in">Sign In!</string>
+    <string name="txt_sign_out">Sign Out</string>
+    <string name="txt_full_name">Full Name</string>
+    <string name="txt_email">Email</string>
+
+    <string name="txt_add_new_address">Add address</string>
+    <string name="txt_edit_address">Edit address</string>
+
+    <string name="txt_none">None</string>
+    <string name="txt_date_registered">Date Registered</string>
+    <string name="txt_edit">Edit</string>
+    <string name="txt_addresses">Addresses</string>
+    <string name="txt_add_address">Add address</string>
+    <string name="txt_additional_notes">Additional Notes</string>
+    <string name="txt_no_addresses_2">No saved addresses found, click the button below to add a new one!</string>
+    <string name="txt_no_addresses">No addresses found!</string>
+    <string name="txt_no_problems">No problems found!</string>
+    <string name="txt_no_problems_2">No problems or disasters found!</string>
+    <string name="txt_no_submits">No submissions found!</string>
+    <string name="txt_no_submits_2">You haven\'t submitted any problem, click the button below to add a new one!</string>
+    <string name="txt_address_deleted_confirmation">Your address has been deleted successfully!</string>
+    <string name="txt_your_address_added_successfully">Your address has been successfully added!</string>
+    <string name="txt_your_address_updated_successfully">Your address has been successfully updated!</string>
+    <string name="txt_profile_updated">Your profile has been updated successfully!</string>
+    <string name="txt_continue">Continue</string>
+    <string name="txt_problems">Problems Around The City</string>
+    <string name="button_submit">Submit</string>
+    <string name="content_description">Image</string>
+    <string name="add_a_new_submission">Add a new submission</string>
+    <string name="txt_add_a_new_submission_2">Add a new problem or event that happened in your city.</string>
+    <string name="txt_global_problems">Global Problems</string>
+    <string name="txt_my_submissions">My Submissions</string>
+    <string name="content_description_button">Button</string>
+    <string name="image_selection_failed">Image selection Failed!</string>
+    <string name="read_storage_permission_denied">Oops, you just denied the permission for storage. You can also allow it from settings.</string>
+    <string name="category">Category</string>
+    <string name="select">SELECT</string>
+    <string name="problems">Problems</string>
+    <string name="damages">Damages</string>
+    <string name="botchery">Botchery</string>
+    <string name="format_location" translatable="false">%1$.7f, %2$.7f</string>
+    <string name="format_location_details" translatable="false">%1$s, %2$s</string>
+    <string name="format_location_lat_long" translatable="false">%1$s, %2$s</string>
+    <string name="format_category">"Category: %1$s"</string>
+    <string name="gps_already_on">GPS is already turned on</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorSecondary3</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+
+    <!-- TextViews -->
+    <style name="TextView_Header_14">
+        <item name="android:fontFamily">@font/core_sans_cr_55_medium</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_14</item>
+    </style>
+
+    <style name="TextView_Header_Main_Dark_14">
+        <item name="android:fontFamily">@font/core_sans_cr_55_medium</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_14</item>
+    </style>
+
+    <style name="TextView_Header_Main_Dark_24">
+        <item name="android:fontFamily">@font/core_sans_cr_55_medium</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_24</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextView_Header_Secondary_LightDark_16">
+        <item name="android:fontFamily">@font/core_sans_cr_45_regular</item>
+        <item name="android:textColor">@color/colorSecondary2</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_16</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextView_16">
+        <item name="android:fontFamily">@font/core_sans_cr_45_regular</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_16</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView_16.Secondary" parent="TextView_16">
+        <item name="android:textColor">@color/colorSecondary2</item>
+    </style>
+
+    <style name="TextView_18" parent="TextView_16">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextView_18.colorText" parent="TextView_18">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextView_16.Secondary_2_12" parent="TextView_16">
+        <item name="android:textColor">@color/colorSecondary2</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_12</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextView_16.Secondary_4_12" parent="TextView_16">
+        <item name="android:textColor">@color/colorSecondary4</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="drawableTint">@color/colorSecondary4</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_12</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/core_sans_cr_55_medium</item>
+        <item name="iconSize">@dimen/btn_font_size_small_14</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">10dp</item>
+        <item name="android:paddingEnd">19dp</item>
+        <item name="android:paddingStart">19dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/btn_font_size_small_14</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="ButtonStyle.White" parent="ButtonStyle">
+        <item name="iconTint">@color/colorPrimary</item>
+        <item name="android:background">@drawable/ripple_btn_white_selector</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="ButtonStyle.PrimaryColor" parent="ButtonStyle">
+        <item name="iconTint">@color/colorPrimary</item>
+        <item name="android:background">@drawable/ripple_btn_primary_color_selector</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+<!-- TextInputLayouts -->
+    <style name="TextInputLayoutStyle_2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+    </style>
+
+<!-- TextEditInputs -->
+    <style name="TextEditInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/core_sans_cr_55_medium</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textColorHint">@color/colorSecondary4</item>
+        <item name="android:textSize">@dimen/txt_font_size_header_16</item>
+    </style>
+
+    <style name="Widget.MyApp.Snackbar" parent="@style/Widget.MaterialComponents.Snackbar">
+        <!-- Custom margin -->
+        <item name="android:layout_margin">0dp</item>
+        <!-- Custom padding -->
+        <item name="android:padding">0dp</item>
+    </style>
+
+</resources>

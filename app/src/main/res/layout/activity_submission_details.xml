@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:fillViewport="true"
+    tools:context=".ui.activities.SubmissionDetailsActivity"
+    tools:ignore="contentDescription">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_title_only" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView_Body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.skydoves.androidveil.VeilLayout
+                android:id="@+id/vLayout_Head"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:veilLayout_baseAlpha="0.6"
+                app:veilLayout_baseColor="@color/colorSecondary2"
+                app:veilLayout_highlightAlpha="1.0"
+                app:veilLayout_highlightColor="@color/colorWhite"
+                app:veilLayout_radius="8dp"
+                app:veilLayout_shimmerEnable="true"
+                app:veilLayout_veiled="false">
+
+                <ImageView
+                    android:id="@+id/imgView_Picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:srcCompat="@drawable/ic_picture_wide" />
+
+            </com.skydoves.androidveil.VeilLayout>
+
+            <com.skydoves.androidveil.VeilLayout
+                android:id="@+id/vLayout_body"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:veilLayout_baseAlpha="0.6"
+                app:veilLayout_baseColor="@color/colorSecondary2"
+                app:veilLayout_highlightAlpha="1.0"
+                app:veilLayout_highlightColor="@color/colorWhite"
+                app:veilLayout_radius="8dp"
+                app:veilLayout_shimmerEnable="true"
+                app:veilLayout_veiled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_container_dialog_bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgView_Picture">
+
+                    <TextView
+                        android:id="@+id/textView_Category"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/core_sans_cr_55_medium"
+                        android:gravity="start"
+                        android:text="@string/txt_loading"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/txt_font_size_header_24"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardView_DateAdded"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        app:cardBackgroundColor="@color/colorTransparent"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView_Category"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_Category">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_container_date">
+
+                            <TextView
+                                android:id="@+id/textView_DateAdded"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/core_sans_cr_45_regular"
+                                android:gravity="center"
+                                android:text="@string/txt_loading"
+                                android:textColor="@color/colorSecondary2"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/textView_Description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/core_sans_cr_45_regular"
+                        android:justificationMode="inter_word"
+                        android:paddingBottom="28dp"
+                        android:text="@string/txt_no_description"
+                        android:textColor="@color/colorSecondary2"
+                        android:textSize="@dimen/txt_font_size_header_16"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_Category"
+                        app:layout_constraintStart_toStartOf="@+id/textView_Category"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView_DateAdded" />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout_Map"
+                        android:layout_width="0dp"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_Description"
+                        app:layout_constraintStart_toStartOf="@+id/textView_Description"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_Description"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView_Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="8dp">
+
+                            <fragment
+                                android:id="@+id/mapFragmentSubmissionDetails"
+                                android:name="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+                    
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.skydoves.androidveil.VeilLayout>
+            
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

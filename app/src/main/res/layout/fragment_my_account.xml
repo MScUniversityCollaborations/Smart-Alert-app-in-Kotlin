@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:fillViewport="true"
+    tools:context=".ui.fragments.MyAccountFragment"
+    tools:ignore="contentDescription">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView_Body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.skydoves.androidveil.VeilLayout
+                android:id="@+id/vLayout_Head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:veilLayout_baseAlpha="0.6"
+                app:veilLayout_highlightAlpha="1.0"
+                app:veilLayout_highlightColor="@color/colorWhite"
+                app:veilLayout_radius="8dp"
+                app:veilLayout_shimmerEnable="true"
+                app:veilLayout_veiled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout_User_Picture"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="40dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/view_User_Picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ic_user_sample" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_User_Picture_Frame"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/shape_user_profile_frame" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/textView_Full_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="40dp"
+                        android:fontFamily="@font/core_sans_cr_55_medium"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/txt_font_size_header_24"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/frameLayout_User_Picture"
+                        app:layout_constraintStart_toStartOf="@+id/frameLayout_User_Picture"
+                        app:layout_constraintTop_toBottomOf="@+id/frameLayout_User_Picture" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.skydoves.androidveil.VeilLayout>
+
+            <com.skydoves.androidveil.VeilLayout
+                android:id="@+id/vLayout_body"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:veilLayout_baseAlpha="0.6"
+                app:veilLayout_baseColor="@color/colorSecondary2"
+                app:veilLayout_highlightAlpha="1.0"
+                app:veilLayout_highlightColor="@color/colorWhite"
+                app:veilLayout_radius="8dp"
+                app:veilLayout_shimmerEnable="true"
+                app:veilLayout_veiled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_container_dialog_bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgView_Picture">
+
+                    <TextView
+                        android:id="@+id/textView_Account_Info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="29dp"
+                        android:fontFamily="@font/core_sans_cr_55_medium"
+                        android:text="@string/txt_account_info"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/txt_font_size_header_24"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_Update_Profile"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView_Account_Info"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_Account_Info">
+
+                        <TextView
+                            android:id="@+id/textView_Email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:text="@string/txt_email"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/txt_font_size_header_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView_Email_Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:textColor="@color/colorText2"
+                            android:textSize="@dimen/txt_font_size_header_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView_Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:text="@string/txt_phone_number"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/txt_font_size_header_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView_Phone_Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:textColor="@color/colorText2"
+                            android:textSize="@dimen/txt_font_size_header_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView_Date_Registered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:text="@string/txt_date_registered"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/txt_font_size_header_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView_Date_Registered_Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:textColor="@color/colorText2"
+                            android:textSize="@dimen/txt_font_size_header_16"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_Update_Profile"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/ripple_btn_primary_color_selector"
+                        android:fontFamily="@font/core_sans_cr_65_bold"
+                        android:gravity="center"
+                        android:text="@string/txt_edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/txt_font_size_header_12"
+                        app:backgroundTint="@null"
+                        app:icon="@drawable/ic_edit_pencil"
+                        app:iconGravity="textStart"
+                        app:iconSize="16dp"
+                        app:iconTint="@color/colorWhite"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView_Account_Info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView_Account_Info" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_Log_Out"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_height_medium_45"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/ripple_btn_negative_color_selector"
+                        android:fontFamily="@font/core_sans_cr_65_bold"
+                        android:gravity="center"
+                        android:text="@string/txt_sign_out"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/btn_font_size_small_14"
+                        app:backgroundTint="@null"
+                        app:icon="@drawable/ic_exit"
+                        app:iconGravity="textStart"
+                        app:iconPadding="10dp"
+                        app:iconSize="24dp"
+                        app:iconTint="@color/colorWhite"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.skydoves.androidveil.VeilLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/layout_Must_Be_Signed_In"
+        layout="@layout/layout_must_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

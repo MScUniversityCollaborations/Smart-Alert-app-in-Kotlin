@@ -1,0 +1,37 @@
+<resources>
+    <!-- Text View Sizes -->
+    <dimen name="txt_font_size_header_32">32sp</dimen>
+    <dimen name="txt_font_size_header_24">24sp</dimen>
+    <dimen name="txt_font_size_header_16">16sp</dimen>
+    <dimen name="txt_font_size_header_14">14sp</dimen>
+    <dimen name="txt_font_size_header_12">12sp</dimen>
+    <dimen name="txt_font_size_header_10">10sp</dimen>
+    <dimen name="txt_font_size_action_bar_20">20sp</dimen>
+    <dimen name="txt_font_size_card_weight_8">8sp</dimen>
+
+    <!-- Button Sizes -->
+    <dimen name="btn_font_size_small_14">14sp</dimen>
+
+    <dimen name="btn_width_small_134">134dp</dimen>
+    <dimen name="btn_width_small_94">94dp</dimen>
+    <dimen name="btn_height_small_37">37dp</dimen>
+
+    <dimen name="btn_height_medium_45">45dp</dimen>
+    <dimen name="btn_icon_size_medium_16">16dp</dimen>
+
+    <!-- Img Sizes -->
+    <dimen name="img_splash_screen_height_180">180dp</dimen>
+    <dimen name="img_splash_screen_width_180">180dp</dimen>
+
+    <!-- Img Button Sizes -->
+    <dimen name="img_btn_height_medium_45">45dp</dimen>
+    <dimen name="img_btn_width_medium_45">45dp</dimen>
+    <dimen name="img_btn_width_large_70">70dp</dimen>
+
+    <!-- Spinner Sizes -->
+    <dimen name="spinner_country_picker_height_55">55dp</dimen>
+
+    <!-- SnackBar Sizes -->
+    <dimen name="snack_bar_error_height_56">56dp</dimen>
+
+</resources>

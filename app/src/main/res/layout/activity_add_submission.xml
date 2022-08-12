@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.activities.AddSubmissionActivity"
+    tools:ignore="ContentDescription" >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_title_only" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView_Body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_container_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/txt_Header_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/core_sans_cr_45_regular"
+                android:text="@string/add_a_new_submission"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/txt_font_size_header_24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_Header_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/core_sans_cr_45_regular"
+                android:text="@string/txt_add_a_new_submission_2"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText2"
+                android:textSize="@dimen/txt_font_size_header_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Header_1" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout_Picture"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/txt_Header_2"
+                app:layout_constraintStart_toStartOf="@+id/txt_Header_2"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Header_2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_Picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:layout_margin="5dp"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_Picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorImageViewBackground"
+                        android:contentDescription="@string/content_description"
+                        android:scaleType="centerInside" />
+
+                    <ImageView
+                        android:id="@+id/imageView_Picture_Add_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:contentDescription="@string/content_description"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_add_picture" />
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputTxtLayout_Category"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintEnabled="false"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/txt_Header_2"
+                app:layout_constraintStart_toStartOf="@+id/txt_Header_2"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout_Picture">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="none"
+                    android:id="@+id/inputTxt_Category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/core_sans_cr_55_medium"
+                    android:gravity="start"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/input_txt_hint_category"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"
+                    android:textColorHint="@color/colorSecondary4"
+                    android:textSize="@dimen/txt_font_size_header_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputTxtLayout_Location"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintEnabled="false"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/txt_Header_2"
+                app:layout_constraintStart_toStartOf="@+id/txt_Header_2"
+                app:layout_constraintTop_toBottomOf="@+id/inputTxtLayout_Category">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="none"
+                    android:id="@+id/inputTxt_Location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/core_sans_cr_55_medium"
+                    android:gravity="start"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/input_txt_hint_location"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"
+                    android:textColorHint="@color/colorSecondary4"
+                    android:textSize="@dimen/txt_font_size_header_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputTxtLayout_Description"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/inputTxtLayout_Location"
+                app:layout_constraintStart_toStartOf="@+id/inputTxtLayout_Location"
+                app:layout_constraintTop_toBottomOf="@+id/inputTxtLayout_Location">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputTxt_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:fontFamily="@font/core_sans_cr_55_medium"
+                    android:gravity="start"
+                    android:hint="@string/input_txt_hint_description"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"
+                    android:textColorHint="@color/colorSecondary4"
+                    android:textSize="@dimen/txt_font_size_header_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_Submit"
+                style="@style/ButtonStyle.PrimaryColor"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height_small_37"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="36dp"
+                android:text="@string/button_submit"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/inputTxtLayout_Description"
+                app:layout_constraintTop_toBottomOf="@+id/inputTxtLayout_Description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

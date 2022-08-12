@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Downloads (HDD)/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_all_categories.xml" value="0.24003623188405798" />
+        <entry key="..\:/Downloads (HDD)/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_notifications.xml" value="0.24003623188405798" />
+        <entry key="..\:/Downloads (HDD)/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_category.xml" value="0.22" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_add_to_cart.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_bell.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_box_colored.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_cactus_colored.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_edit_pencil.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_home_location.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_location_colored.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_location_map_colored.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_master_card.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_minus.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_outline_cart_checkout.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_outline_coins.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_outline_credit_card.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_outline_paypal.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_outline_wallet.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_picture.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_picture_wide.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_plastic_bottle.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_remove_from_cart.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_tags.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_vector_white_delete.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/ic_visa.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/shape_container_recycler_view_horizontal.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/drawable/striking_red_text.xml" value="0.3651041666666667" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_CHECKOUT.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_acc_fill_info.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_add_edit_address.xml" value="0.5" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_all_categories.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_checkout.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_list_addresses.xml" value="0.22" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_list_cart_items.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_list_orders.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_list_products.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_main.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_notifications.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_order_details.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_orders.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_pay_credit_card.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_product_details.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_sign_in.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_sign_up.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_user_profile.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/activity_user_profile_edit.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/dialog_no_wifi.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/dialog_progress.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/fragment_favorites.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/fragment_home.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/fragment_my_account.xml" value="0.25" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/fragment_my_cart.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/fragment_pending_orders.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_address.xml" value="0.5" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_cart_product.xml" value="0.5" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_category.xml" value="0.25" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_favorite_product.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_order.xml" value="0.67" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_product.xml" value="0.67" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_product_wide.xml" value="0.5" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/item_product_wide_favorite.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_empty_state_addresses.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_empty_state_cart.xml" value="0.33" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_empty_state_categories.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_empty_state_category_products.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_empty_state_deals.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_empty_state_favorites.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_empty_state_popular.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/layout_must_sign_in.xml" value="0.3484375" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/nav_drawer_header_not_signed_in.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/nav_drawer_header_signed_in.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_empty_state_cart.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_empty_state_deals.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_empty_state_notifications.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_empty_state_orders.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_empty_state_search.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_item_order.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_item_product.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_item_product_wide.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/recycler_item_product_wide_favorites.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/shimmer_item_product.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/toolbar_activity_main.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/toolbar_activity_my_orders.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/toolbar_title_only.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/layout/toolbar_user_profile_edit.xml" value="0.25" />
+        <entry key="..\:/Vault/University/DISSERTATION/eMarket/eMarket/app/src/main/res/menu/drawer_menu.xml" value="0.3489583333333333" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/1st Assignment/City Trouble/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable-night/shape_container_all_corners.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable-xxhdpi/selector_drawer_item_color.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_add_picture.xml" value="0.1415" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_book_favorite.xml" value="0.1405" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_box_colored.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_cactus_colored.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_check_mark.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_chevron_left_24dp.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_chevron_right.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_circle_low_opacity.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_cloud_filled.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_edit_pencil.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_empty_content_filled.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_enter.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_exit.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_file_form.xml" value="0.1405" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_gear.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_global.xml" value="0.1405" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_heart.xml" value="0.1415" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_list.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_picture.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_picture_wide.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_plus.xml" value="0.17" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_search.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_search_not_found.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_success.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_tags.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_town.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_vector_delete.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_vector_edit.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_vector_white_delete.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ic_vector_white_edit.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ripple_btn_category_selector.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ripple_btn_negative_color_selector.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ripple_btn_primary_color_selector.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/ripple_btn_white_selector.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/selector_recycler_chevron_right.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_container_all_corners.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_container_dialog_bottom.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_container_recycler_view_horizontal.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_container_top.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_container_weight.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_input_spinner.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_recycler_order.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/shape_user_profile_frame.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/drawable/striking_red_text.xml" value="0.1715" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_acc_fill_info.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_add_edit_address.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_add_submission.xml" value="0.2" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_list_orders.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_order_details.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_sign_up.xml" value="0.21944444444444444" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/activity_submission_details.xml" value="0.264" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/dialog_progress.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/dialog_select_category.xml" value="0.264" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/fragment_favorites.xml" value="0.536" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/fragment_my_account.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/fragment_submissions.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/item_address.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/item_order.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/item_product.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/item_product_wide.xml" value="0.264" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/item_submission.xml" value="0.264" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/layout_empty_state_addresses.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/layout_empty_state_notifications.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/layout_empty_state_popular.xml" value="0.536" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/layout_empty_state_problems.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/layout_empty_state_search.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/layout_empty_state_submissions.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/layout_snackbar_success.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/nav_drawer_header_not_signed_in.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/nav_drawer_header_signed_in.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/shimmer_item_product.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/snackbar_error.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/snackbar_sign_up_success.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/toolbar_activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/toolbar_product_details.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/toolbar_title_only.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/toolbar_user_profile_details.xml" value="0.264" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/layout/toolbar_user_profile_edit.xml" value="0.23229166666666667" />
+        <entry key="..\:/Vault/University/MSc/2nd Semester/SOFTWARE DEVELOPMENT FOR MOBILE DEVICES/Ergasies/City Trouble/app/src/main/res/menu/drawer_menu.xml" value="0.23229166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

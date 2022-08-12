@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="10dp"
+    tools:ignore="ContentDescription">
+
+    <TextView
+        android:id="@+id/textView_Date"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/core_sans_cr_55_medium"
+        android:maxLines="1"
+        android:text="Today"
+        android:visibility="visible"
+        android:textColor="@color/colorSecondary2"
+        android:textSize="@dimen/txt_font_size_header_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_SingleItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/colorTransparent"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Date">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_container_recycler_view_horizontal">
+
+            <ImageView
+                android:id="@+id/imageView_Picture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_picture"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_Location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/core_sans_cr_55_medium"
+                android:maxLines="1"
+                android:text="@string/txt_loading"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/txt_font_size_header_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout_Chevron"
+                app:layout_constraintStart_toEndOf="@+id/imageView_Picture"
+                app:layout_constraintTop_toTopOf="@+id/imageView_Picture" />
+
+            <TextView
+                android:id="@+id/textView_Category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/core_sans_cr_45_regular"
+                android:maxLines="1"
+                android:text="@string/txt_loading"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/txt_font_size_header_14"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout_Chevron"
+                app:layout_constraintStart_toStartOf="@+id/textView_Location"
+                app:layout_constraintTop_toBottomOf="@+id/textView_Location" />
+
+            <TextView
+                android:id="@+id/textView_Desc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/core_sans_cr_45_regular"
+                android:maxLines="3"
+                android:text="@string/txt_loading"
+                android:textColor="@color/colorSecondary2"
+                android:textSize="@dimen/txt_font_size_header_14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_Picture"
+                app:layout_constraintEnd_toEndOf="@+id/textView_Category"
+                app:layout_constraintStart_toStartOf="@+id/textView_Location"
+                app:layout_constraintTop_toBottomOf="@+id/textView_Category"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout_Chevron"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/selector_recycler_chevron_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgView_Chevron"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/colorContainer" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
