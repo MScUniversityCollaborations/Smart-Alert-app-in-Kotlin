@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.unipi.mpsp21043.smartalert">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.unipi.torpiles.smartalert">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -37,7 +37,7 @@
         <!-- region [START Activities] -->
             <!-- Splash Screen Activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.SplashActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.SplashActivity"
                 android:theme="@style/Theme.Main.NoActionBar"
                 android:screenOrientation="fullSensor"
                 android:exported="true">
@@ -50,15 +50,15 @@
 
             <!-- Home/Main Activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.MainActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.MainActivity"
                 android:theme="@style/Theme.Main.NoActionBar3">
             </activity>
 
             <!-- Problem Details Activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.SubmissionDetailsActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.SubmissionDetailsActivity"
                 android:theme="@style/Theme.Main.NoActionBar3"
-                android:parentActivityName="com.unipi.mpsp21043.smartalert.ui.activities.MainActivity"
+                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.MainActivity"
                 android:exported="true">
 
                 <intent-filter>
@@ -68,72 +68,72 @@
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.mpsp21043.smartalert.ui.activities.MainActivity" />
+                    android:value="com.unipi.torpiles.smartalert.ui.activities.MainActivity" />
             </activity>
 
             <!-- Sign In activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.SignInActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.SignInActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.mpsp21043.smartalert.ui.activities.MainActivity">
+                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.MainActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.mpsp21043.smartalert.ui.activities.MainActivity" />
+                    android:value="com.unipi.torpiles.smartalert.ui.activities.MainActivity" />
             </activity>
 
             <!-- Sign Up activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.SignUpActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.SignUpActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.mpsp21043.smartalert.ui.activities.SignInActivity">
+                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.SignInActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.mpsp21043.smartalert.ui.activities.SignInActivity" />
+                    android:value="com.unipi.torpiles.smartalert.ui.activities.SignInActivity" />
             </activity>
 
             <!-- Add submission activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.AddSubmissionActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.AddSubmissionActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.mpsp21043.smartalert.ui.activities.MainActivity">
+                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.MainActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.mpsp21043.smartalert.ui.activities.MainActivity" />
+                    android:value="com.unipi.torpiles.smartalert.ui.activities.MainActivity" />
             </activity>
 
             <!-- Forgot Password activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.ForgotPasswordActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.ForgotPasswordActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.mpsp21043.smartalert.ui.activities.SignInActivity">
+                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.SignInActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.mpsp21043.smartalert.ui.activities.SignInActivity" />
+                    android:value="com.unipi.torpiles.smartalert.ui.activities.SignInActivity" />
             </activity>
 
             <!-- Update Profile activity -->
             <activity
-                android:name="com.unipi.mpsp21043.smartalert.ui.activities.EditProfileActivity"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.EditProfileActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar3"
-                android:parentActivityName="com.unipi.mpsp21043.smartalert.ui.activities.SignInActivity">
+                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.SignInActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.mpsp21043.smartalert.ui.activities.SignInActivity" />
+                    android:value="com.unipi.torpiles.smartalert.ui.activities.SignInActivity" />
             </activity>
 
         <!-- endregion [END Activities] -->

@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:765058144848:android:4c34d523e32f4b51508f55",
         "android_client_info": {
-          "package_name": "com.unipi.mpsp21043.citytrouble"
+          "package_name": "com.unipi.torpiles.smartalert"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "765058144848-04srl3lakkuui2f4052aceopbuqemrjm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.unipi.mpsp21043.citytrouble",
+            "package_name": "com.unipi.torpiles.smartalert",
             "certificate_hash": "e6881376947abf1572a7673bdedf08267cb824ed"
           }
         },
