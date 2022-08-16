@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">City Trouble</string>
+    <string name="app_name">SmartAlert</string>
 
     <!-- System Strings-->
     <string name="db_field_date_created">dateCreated</string>

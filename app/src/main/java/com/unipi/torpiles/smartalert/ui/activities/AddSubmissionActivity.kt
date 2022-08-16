@@ -25,6 +25,7 @@ import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
 import com.google.android.gms.tasks.Task
 import com.google.android.material.button.MaterialButton
+import com.unipi.torpiles.smartalert.R
 import com.unipi.torpiles.smartalert.database.FirestoreHelper
 import com.unipi.torpiles.smartalert.databinding.ActivityAddSubmissionBinding
 import com.unipi.torpiles.smartalert.models.Submission
