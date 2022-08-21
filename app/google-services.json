@@ -7,14 +7,14 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:371702659809:android:d49a8055d472ba473115a0",
+        "mobilesdk_app_id": "1:371702659809:android:f909d5c08b4729bf3115a0",
         "android_client_info": {
           "package_name": "com.unipi.torpiles.smartalert"
         }
       },
       "oauth_client": [
         {
-          "client_id": "371702659809-apeui2mbu86504lnc6u1l6ofas4sebt2.apps.googleusercontent.com",
+          "client_id": "371702659809-06qauq99lidrk0fkrb7cjr99b9voo98o.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.unipi.torpiles.smartalert",

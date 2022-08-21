@@ -145,7 +145,8 @@ class SignUpActivity : BaseActivity() {
                             val user = User(
                                 firebaseUser.uid,
                                 inputTxtName.text.toString().trim { it <= ' ' },
-                                inputTxtEmail.text.toString().trim { it <= ' ' }
+                                inputTxtEmail.text.toString().trim { it <= ' ' },
+                                role = getString(R.string.role_member)
                             )
 
 

@@ -30,6 +30,7 @@ import com.unipi.torpiles.smartalert.database.FirestoreHelper
 import com.unipi.torpiles.smartalert.databinding.ActivityAddSubmissionBinding
 import com.unipi.torpiles.smartalert.models.Submission
 import com.unipi.torpiles.smartalert.utils.*
+import com.unipi.torpiles.smartalert.utils.Constants.STORAGE_PATH_SUBMISSIONS
 import java.io.IOException
 
 
@@ -57,10 +58,12 @@ class AddSubmissionActivity : BaseActivity() {
 
     private fun init() {
         // Preparing location requests.
-        locationRequest = LocationRequest.create()
-        locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        locationRequest.interval = 5000
-        locationRequest.fastestInterval = 2000
+        locationRequest = LocationRequest.create().apply {
+            priority = Priority.PRIORITY_HIGH_ACCURACY
+            interval = 5000
+            fastestInterval = 2000
+            maxWaitTime = 100
+        }
 
         setupUI()
         setupActionBar()
@@ -317,7 +320,7 @@ class AddSubmissionActivity : BaseActivity() {
             FirestoreHelper().uploadImageToCloudStorage(
                 this@AddSubmissionActivity,
                 mSelectedImageFileUri,
-                Constants.SUBMISSION_IMAGE
+                STORAGE_PATH_SUBMISSIONS + Constants.SUBMISSION_IMAGE
             )
         }
         else {

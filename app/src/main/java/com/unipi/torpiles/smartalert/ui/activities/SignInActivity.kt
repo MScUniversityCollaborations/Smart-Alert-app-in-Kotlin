@@ -84,33 +84,41 @@ class SignInActivity : BaseActivity() {
     }
 
     private fun signInUser() {
-        if (validateFields()) {
-            // Show the progress dialog.
-            showProgressDialog()
+        if (Constants.isNetworkConnected(this@SignInActivity)) {
+            if (validateFields()) {
+                // Show the progress dialog.
+                showProgressDialog()
 
-            binding.apply {
-                // Get the text from editText and trim the space
-                val email = inputTxtEmail.text.toString().trim { it <= ' ' }
-                val password = inputTxtPassword.text.toString().trim { it <= ' ' }
+                binding.apply {
+                    // Get the text from editText and trim the space
+                    val email = inputTxtEmail.text.toString().trim { it <= ' ' }
+                    val password = inputTxtPassword.text.toString().trim { it <= ' ' }
 
-                // Log-In using FirebaseAuth
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener { task ->
+                    // Log-In using FirebaseAuth
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener { task ->
 
-                        if (task.isSuccessful) {
-                            FirestoreHelper().getUserDetails(this@SignInActivity)
-                        } else {
-                            // Hide the progress dialog
-                            hideProgressDialog()
-                            SnackBarErrorClass
-                                .make(root, task.exception!!.message.toString())
-                                .show()
+                            if (task.isSuccessful) {
+                                FirestoreHelper().getUserDetails(this@SignInActivity)
+                            } else {
+                                // Hide the progress dialog
+                                hideProgressDialog()
+                                SnackBarErrorClass
+                                    .make(root, task.exception!!.message.toString())
+                                    .show()
+                            }
                         }
-                    }
+                }
             }
+            else
+                binding.btnSignIn.startAnimation(AnimationUtils.loadAnimation(this@SignInActivity, R.anim.shake))
         }
-        else
-            binding.btnSignIn.startAnimation(AnimationUtils.loadAnimation(this@SignInActivity, R.anim.shake))
+        else {
+            SnackBarErrorClass
+                .make(binding.root, getString(R.string.txt_error_no_internet_connection))
+                .show()
+        }
+
     }
 
     /**

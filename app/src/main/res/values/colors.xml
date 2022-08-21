@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="colorPrimary">#29C17E</color>
-    <color name="colorPrimaryDark">#1F915F</color>
-    <color name="colorPrimaryLight">#54CD98</color>
-    <color name="colorAccent">#29C17E</color>
+    <color name="colorPrimary">#f36645</color>
+    <color name="colorPrimaryDark">#883623</color>
+    <color name="colorPrimaryLight">#ff8348</color>
+    <color name="colorAccent">#f36645</color>
 
     <color name="colorNavigationBar">#272A3F</color>
-    <color name="colorTabs">#1F915F</color>
+    <color name="colorTabs">#c05036</color>
     <color name="colorTabSelected">@color/colorWhite</color>
     <color name="colorPrimaryLightLowOpacity">#EBFBEF</color>
 
@@ -19,7 +19,7 @@
 
     <color name="colorImageViewBackground">#E1E1E1</color>
 
-    <color name="colorStatusBar">@color/colorPrimaryLight</color>
+    <color name="colorStatusBar">@color/colorPrimary</color>
 
     <color name="colorSecondary">#272A3F</color>
     <color name="colorSecondary2">#6E7989</color>

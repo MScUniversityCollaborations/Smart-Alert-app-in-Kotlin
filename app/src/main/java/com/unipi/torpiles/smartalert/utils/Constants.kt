@@ -1,14 +1,23 @@
 package com.unipi.torpiles.smartalert.utils
 
 import android.app.Activity
+import android.content.Context
+import android.content.Context.CONNECTIVITY_SERVICE
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
 import android.net.Uri
+import android.os.Build
 import android.provider.MediaStore
 import android.webkit.MimeTypeMap
+import androidx.core.content.ContextCompat.getSystemService
 import com.google.android.material.behavior.SwipeDismissBehavior
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.math.acos
+
 
 // Create a custom object to declare all the constant values in a single file. The constant values declared here is can be used in whole application.
 /**
@@ -53,6 +62,10 @@ object Constants {
     const val EXTRA_USER_DETAILS: String = "extraUserDetails"
     const val EXTRA_SHOW_SUBMISSION_CREATED_SNACKBAR= "extraSubmissionCreatedSnackbar"
 
+    // Other
+    const val STORAGE_PATH_USERS: String = "Users/"
+    const val STORAGE_PATH_SUBMISSIONS: String = "Submissions/"
+
     /**
      * A function for user profile image selection from phone storage.
      */
@@ -84,6 +97,18 @@ object Constants {
          */
         return MimeTypeMap.getSingleton()
             .getExtensionFromMimeType(activity.contentResolver.getType(uri!!))
+    }
+
+    fun isNetworkConnected(context: Context): Boolean {
+        val cm = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        val n: Network? = cm.activeNetwork
+        if (n != null) {
+            val nc = cm.getNetworkCapabilities(n)
+            return nc!!.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) || nc.hasTransport(
+                NetworkCapabilities.TRANSPORT_WIFI
+            )
+        }
+        return false
     }
 }
 // END
