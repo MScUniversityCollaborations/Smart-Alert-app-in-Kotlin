@@ -40,7 +40,7 @@ class SubmissionsFragment : BaseFragment() {
                 layoutMustBeSignedIn.apply {
                     root.visibility = View.VISIBLE
                     btnSignIn.setOnClickListener{ goToSignInActivity(this@SubmissionsFragment.requireContext()) }
-                    txtViewSignUp.setOnClickListener{ goToSignInActivity(this@SubmissionsFragment.requireContext()) }
+                    txtViewSignUp.setOnClickListener{ goToSignUpActivity(this@SubmissionsFragment.requireContext()) }
                 }
             }
         }

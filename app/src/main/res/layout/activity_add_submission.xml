@@ -89,9 +89,10 @@
                         android:id="@+id/imageView_Picture"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:src="@drawable/png_picture_sample"
                         android:background="@color/colorImageViewBackground"
                         android:contentDescription="@string/content_description"
-                        android:scaleType="centerInside" />
+                        android:scaleType="centerCrop" />
 
                     <ImageView
                         android:id="@+id/imageView_Picture_Add_Button"
@@ -194,6 +195,33 @@
                     android:textSize="@dimen/txt_font_size_header_16" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <LinearLayout
+                android:id="@+id/linearLayoutHighDanger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/inputTxtLayout_Description"
+                app:layout_constraintStart_toStartOf="@+id/inputTxtLayout_Description"
+                app:layout_constraintTop_toBottomOf="@+id/inputTxtLayout_Description">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchHighDanger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@null" />
+
+                <TextView
+                    android:id="@+id/textViewHighDanger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/core_sans_cr_55_medium"
+                    android:textColor="@color/colorText"
+                    android:text="@string/high_danger_level_toggle" />
+            </LinearLayout>
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_Submit"
                 style="@style/ButtonStyle.PrimaryColor"
@@ -205,7 +233,7 @@
                 app:backgroundTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/inputTxtLayout_Description"
-                app:layout_constraintTop_toBottomOf="@+id/inputTxtLayout_Description" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutHighDanger" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

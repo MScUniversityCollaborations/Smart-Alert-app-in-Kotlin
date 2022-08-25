@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "371702659809",
-    "project_id": "smartalert-unipi",
-    "storage_bucket": "smartalert-unipi.appspot.com"
+    "project_number": "611028815362",
+    "project_id": "smartalert-ff22d",
+    "storage_bucket": "smartalert-ff22d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:371702659809:android:f909d5c08b4729bf3115a0",
+        "mobilesdk_app_id": "1:611028815362:android:66b3f434d2ba75aaf1611b",
         "android_client_info": {
           "package_name": "com.unipi.torpiles.smartalert"
         }
       },
       "oauth_client": [
         {
-          "client_id": "371702659809-06qauq99lidrk0fkrb7cjr99b9voo98o.apps.googleusercontent.com",
+          "client_id": "611028815362-1u6d2ualt06rbdimgo0h2hmkjpr6tv6q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.unipi.torpiles.smartalert",
-            "certificate_hash": "b5ae8f597d67fc89d5bbd227f3c2ac9f59f4f759"
+            "certificate_hash": "efff84d08716bd91f3a68c54d4156b6ac127cd40"
           }
         },
         {
-          "client_id": "371702659809-ovdq9hqr89bilf8hbq5nl9t3am01jh8h.apps.googleusercontent.com",
+          "client_id": "611028815362-rmv41ei1gk9th6phkvcljodf0qhsiidm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCNzrAfk2aMHDI_OtKsbWBkrD28cxc6S6g"
+          "current_key": "AIzaSyA79ahWXc10TEaUjk2HA4wzPyBdjM3yyRQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "371702659809-ovdq9hqr89bilf8hbq5nl9t3am01jh8h.apps.googleusercontent.com",
+              "client_id": "611028815362-rmv41ei1gk9th6phkvcljodf0qhsiidm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

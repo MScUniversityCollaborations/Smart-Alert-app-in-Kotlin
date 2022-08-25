@@ -88,14 +88,29 @@ class AddSubmissionActivity : BaseActivity() {
 
                 val dialogSelectButton = dialog.findViewById<MaterialButton>(R.id.btn_Dialog_Select)
                 dialogSelectButton.setOnClickListener {
-                    if (dialog.findViewById<RadioButton>(R.id.radioButton_Problems).isChecked) {
-                        inputTxtCategory.setText(getString(R.string.problems))
+                    if (dialog.findViewById<RadioButton>(R.id.radioButtonNaturalDisasters).isChecked) {
+                        inputTxtCategory.setText(getString(R.string.natural_disaster))
                     }
-                    else if (dialog.findViewById<RadioButton>(R.id.radioButton_Damage).isChecked) {
+                    else if (dialog.findViewById<RadioButton>(R.id.radioButtonWaterFlood).isChecked) {
+                        inputTxtCategory.setText(getString(R.string.water_flood))
+                    }
+                    else if (dialog.findViewById<RadioButton>(R.id.radioButtonTsunami).isChecked) {
+                        inputTxtCategory.setText(getString(R.string.tsunami))
+                    }
+                    else if (dialog.findViewById<RadioButton>(R.id.radioButtonFire).isChecked) {
+                        inputTxtCategory.setText(getString(R.string.fire))
+                    }
+                    else if (dialog.findViewById<RadioButton>(R.id.radioButtonRobbery).isChecked) {
+                        inputTxtCategory.setText(getString(R.string.robbery))
+                    }
+                    else if (dialog.findViewById<RadioButton>(R.id.radioButtonFog).isChecked) {
+                        inputTxtCategory.setText(getString(R.string.fog))
+                    }
+                    else if (dialog.findViewById<RadioButton>(R.id.radioButtonDamages).isChecked) {
                         inputTxtCategory.setText(getString(R.string.damages))
                     }
-                    else if (dialog.findViewById<RadioButton>(R.id.radioButton_Botchery).isChecked) {
-                        inputTxtCategory.setText(getString(R.string.botchery))
+                    else if (dialog.findViewById<RadioButton>(R.id.radioButtonOther).isChecked) {
+                        inputTxtCategory.setText(getString(R.string.other))
                     }
                     else {
                         inputTxtCategory.setText("")

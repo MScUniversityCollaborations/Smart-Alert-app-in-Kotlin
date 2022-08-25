@@ -23,6 +23,7 @@ data class User(
     @ServerTimestamp
     val dateRegistered: Date = Date(),
     val role: String = "",
+    val notifications: Boolean = true,
     val profImgUrl: String = "",
     val profileCompleted: Boolean = false,
 ) : Parcelable

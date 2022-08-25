@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginStart="24dp"
-    android:layout_marginEnd="24dp"
     android:gravity="center"
     tools:ignore="ContentDescription">
 
@@ -58,18 +56,84 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView_Header">
 
                     <RadioButton
-                        android:id="@+id/radioButton_Problems"
+                        android:id="@+id/radioButtonNaturalDisasters"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="start"
+                        android:checked="false"
+                        android:drawableEnd="@drawable/svg_warning"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/core_sans_cr_45_regular"
+                        android:text="@string/natural_disaster"
+                        android:textColor="@color/colorText"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonWaterFlood"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="start"
+                        android:checked="false"
+                        android:drawableEnd="@drawable/svg_warning"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/core_sans_cr_45_regular"
+                        android:text="@string/water_flood"
+                        android:textColor="@color/colorText"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonTsunami"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="start"
+                        android:checked="false"
+                        android:drawableEnd="@drawable/svg_warning"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/core_sans_cr_45_regular"
+                        android:text="@string/tsunami"
+                        android:textColor="@color/colorText"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonFire"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="start"
+                        android:checked="false"
+                        android:drawableEnd="@drawable/svg_warning"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/core_sans_cr_45_regular"
+                        android:text="@string/fire"
+                        android:textColor="@color/colorText"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonRobbery"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:drawableEnd="@drawable/svg_warning"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/core_sans_cr_45_regular"
+                        android:text="@string/robbery"
+                        android:textColor="@color/colorText"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonFog"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_gravity="start"
                         android:checked="false"
                         android:fontFamily="@font/core_sans_cr_45_regular"
-                        android:text="@string/problems"
+                        android:text="@string/fog"
                         android:textColor="@color/colorText"
                         android:textSize="18sp" />
 
                     <RadioButton
-                        android:id="@+id/radioButton_Damage"
+                        android:id="@+id/radioButtonDamages"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_gravity="start"
@@ -81,17 +145,35 @@
                         android:textSize="18sp" />
 
                     <RadioButton
-                        android:id="@+id/radioButton_Botchery"
+                        android:id="@+id/radioButtonOther"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_gravity="start"
                         android:layout_marginTop="8dp"
                         android:checked="false"
                         android:fontFamily="@font/core_sans_cr_45_regular"
-                        android:text="@string/botchery"
+                        android:text="@string/other"
                         android:textColor="@color/colorText"
                         android:textSize="18sp" />
+
                 </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txt_Header_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/core_sans_cr_45_regular"
+                    android:text="@string/category_red_warning"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText2"
+                    android:textSize="@dimen/txt_font_size_header_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_Dialog_Select"
@@ -105,7 +187,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/radioGroup"
                     app:layout_constraintStart_toStartOf="@+id/radioGroup"
-                    app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Header_2" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

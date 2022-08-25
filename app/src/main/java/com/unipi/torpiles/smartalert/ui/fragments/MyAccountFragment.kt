@@ -70,7 +70,7 @@ class MyAccountFragment : BaseFragment() {
                 layoutMustBeSignedIn.apply {
                     root.visibility = View.VISIBLE
                     btnSignIn.setOnClickListener{ goToSignInActivity(this@MyAccountFragment.requireContext()) }
-                    txtViewSignUp.setOnClickListener{ goToSignInActivity(this@MyAccountFragment.requireContext()) }
+                    txtViewSignUp.setOnClickListener{ goToSignUpActivity(this@MyAccountFragment.requireContext()) }
                 }
             }
     }
