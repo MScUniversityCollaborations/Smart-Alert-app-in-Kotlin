@@ -66,16 +66,14 @@
     <string name="txt_loading">Loading…</string>
     <string name="txt_empty_cart">Your cart is empty!</string>
     <string name="txt_empty_cart_2">Looks like you haven\'t made your choice yet 😢</string>
+
+    <!-- Profile -->
     <string name="txt_profile">Profile</string>
     <string name="txt_phone_number">Phone Number</string>
-    <string name="txt_street_address">Street address</string>
-    <string name="txt_zip_code">Zip code</string>
-    <string name="txt_country">Country</string>
-    <string name="txt_street_number">Street Number</string>
-    <string name="txt_type">Type</string>
-    <string name="txt_house_">House</string>
-    <string name="txt_apartment">Apartment</string>
-    <string name="txt_other">Other</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_when_high_danger">This must be enabled in order to receive notifications about high danger alerts!</string>
 
     <string name="txt_error_no_internet_connection">No Internet connection found!</string>
     <string name="txt_error_registration_failed">An error has occurred with registration, please contact our support team.</string>
@@ -139,7 +137,8 @@
     <string name="nav_drawer_open">Open</string>
     <string name="nav_drawer_close">Close</string>
     <string name="drawer_nav_bar_category_general">General</string>
-    <string name="drawer_nav_bar_item_problems">Problems</string>
+    <string name="drawer_nav_bar_item_home">Area Problems</string>
+    <string name="drawer_nav_bar_item_problems">Global Problems</string>
     <string name="drawer_nav_bar_category_account">Account</string>
     <string name="drawer_nav_bar_item_my_account">My Account</string>
     <string name="drawer_nav_bar_item_submits">My Submissions</string>
@@ -196,16 +195,18 @@
     <string name="txt_your_address_updated_successfully">Your address has been successfully updated!</string>
     <string name="txt_profile_updated">Your profile has been updated successfully!</string>
     <string name="txt_continue">Continue</string>
-    <string name="txt_problems">Problems Around The City</string>
+    <string name="txt_problems">Issues Around My Area</string>
     <string name="button_submit">Submit</string>
     <string name="content_description">Image</string>
     <string name="add_a_new_submission">Add a new event</string>
     <string name="txt_add_a_new_submission_2">Add a new problem or event that happened near your area.</string>
     <string name="txt_global_problems">Global Problems</string>
+    <string name="area_problems">Area Problems</string>
     <string name="txt_my_submissions">My Submissions</string>
     <string name="content_description_button">Button</string>
     <string name="image_selection_failed">Image selection Failed!</string>
     <string name="read_storage_permission_denied">Oops, you just denied the permission for storage. You can also allow it from settings.</string>
+    <string name="submission_created_successfully">Submission has been created successfully!\nNow our staff will verify it!</string>
     <string name="category">Category</string>
     <string name="select">SELECT</string>
 
@@ -224,9 +225,19 @@
     <string name="format_location_details" translatable="false">%1$s, %2$s</string>
     <string name="format_location_lat_long" translatable="false">%1$s, %2$s</string>
     <string name="format_category">"Category: %1$s"</string>
+    <string name="format_danger_rank">"Rank: %1$s"</string>
     <string name="gps_already_on">GPS is already turned on</string>
     <string name="category_red_warning">Categories with the warning icon indicate high danger!</string>
     <string name="high_danger_level_toggle">Is this event considered high danger level?</string>
+
+    <!-- Notifications -->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="notification_channel_desc">Notifies you when a high danger event is near your area!</string>
+    <string name="notification_favorites">Favorites</string>
+    <string name="notification_payload_fav_title">%1$s: Stock updated!</string>
+    <string name="notification_payload_fav_body">%1$s is now available in stock 😍</string>
+    <string name="notification_add_to_cart">Add to cart</string>
+    <string name="notification_mark_as_read">Mark as read</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 

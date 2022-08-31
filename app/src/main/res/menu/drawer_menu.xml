@@ -4,10 +4,14 @@
     <item android:title="@string/drawer_nav_bar_category_general">
         <menu>
             <group android:checkableBehavior="single">
-            <item
-                android:id="@+id/nav_drawer_item_home"
-                android:icon="@drawable/ic_global"
-                android:title="@string/drawer_nav_bar_item_problems" />
+                <item
+                    android:id="@+id/nav_drawer_item_home"
+                    android:icon="@drawable/svg_location_pin"
+                    android:title="@string/drawer_nav_bar_item_home" />
+                <item
+                    android:id="@+id/nav_drawer_item_all_submissions"
+                    android:icon="@drawable/ic_global"
+                    android:title="@string/drawer_nav_bar_item_problems" />
             </group>
         </menu>
     </item>
@@ -15,7 +19,7 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_drawer_item_submissions"
+                    android:id="@+id/nav_drawer_item_my_submissions"
                     android:icon="@drawable/ic_file_form"
                     android:title="@string/drawer_nav_bar_item_submits" />
                 <item
@@ -25,7 +29,7 @@
             </group>
         </menu>
     </item>
-    <item android:title="@string/drawer_nav_bar_category_admin" android:visible="false">
+    <item android:title="@string/drawer_nav_bar_category_admin" android:visible="false" android:id="@+id/nav_drawer_group_admin">
         <menu>
             <group android:checkableBehavior="single">
                 <item

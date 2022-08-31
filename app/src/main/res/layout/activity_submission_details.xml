@@ -51,7 +51,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
 
-                    app:srcCompat="@drawable/ic_picture_wide" />
+                    app:srcCompat="@drawable/png_picture_sample" />
 
             </com.skydoves.androidveil.VeilLayout>
 
@@ -91,8 +91,18 @@
                         android:textSize="@dimen/txt_font_size_header_24"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        android:drawablePadding="8dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--<ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/svg_warning"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView_Category"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_Category"
+                        app:layout_constraintTop_toTopOf="@+id/textView_Category" />-->
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardView_DateAdded"
@@ -133,6 +143,25 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
+                        android:id="@+id/textViewDangerRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/core_sans_cr_45_regular"
+                        android:gravity="center"
+                        android:text="@string/txt_loading"
+                        android:textColor="@color/colorSecondary2"
+                        android:textSize="18sp"
+                        android:drawablePadding="1dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardView_DateAdded"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_Category"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/cardView_DateAdded"
+                        app:layout_constraintTop_toTopOf="@+id/cardView_DateAdded"
+                        app:drawableStartCompat="@drawable/svg_chevron_rank" />
+
+                    <TextView
                         android:id="@+id/textView_Description"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -164,7 +193,6 @@
                             android:id="@+id/cardView_Map"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_margin="5dp"
                             android:elevation="10dp"
                             app:cardCornerRadius="8dp">
 
@@ -172,7 +200,8 @@
                                 android:id="@+id/mapFragmentSubmissionDetails"
                                 android:name="com.google.android.gms.maps.SupportMapFragment"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent" />
+                                android:layout_height="match_parent"
+                                tools:ignore="FragmentTagUsage" />
 
                         </androidx.cardview.widget.CardView>
 

@@ -62,6 +62,9 @@ class SubmissionDetailsActivity : BaseActivity(), OnMapReadyCallback {
             textViewDateAdded.text = modelSubmission.dateAdded.toString()
             textViewDescription.text = modelSubmission.description
 
+            if (modelSubmission.isHighDanger)
+                textViewCategory.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.svg_warning, 0, 0,0)
+
             // Move camera to first element and start from there.
             val marker = LatLng(modelSubmission.lat.toDouble(), modelSubmission.long.toDouble())
             mMap.moveCamera(CameraUpdateFactory.newLatLng(marker))

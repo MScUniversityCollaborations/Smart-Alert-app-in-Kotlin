@@ -14,9 +14,10 @@ import com.google.firebase.storage.StorageReference
 import com.unipi.torpiles.smartalert.models.Submission
 import com.unipi.torpiles.smartalert.models.User
 import com.unipi.torpiles.smartalert.ui.activities.*
+import com.unipi.torpiles.smartalert.ui.fragments.AllSubmissionsFragment
 import com.unipi.torpiles.smartalert.ui.fragments.HomeFragment
 import com.unipi.torpiles.smartalert.ui.fragments.MyAccountFragment
-import com.unipi.torpiles.smartalert.ui.fragments.SubmissionsFragment
+import com.unipi.torpiles.smartalert.ui.fragments.MySubmissionsFragment
 import com.unipi.torpiles.smartalert.utils.Constants
 
 class FirestoreHelper {
@@ -42,18 +43,54 @@ class FirestoreHelper {
         return currentUserID
     }
 
+    fun getFCMRegistrationTokenDB(onComplete: (tokens: MutableList<String>) -> Unit) {
+        dbFirestore.collection(Constants.COLLECTION_USERS)
+            .document(getCurrentUserID())
+            .get()
+            .addOnSuccessListener {
+                val user = it.toObject(User::class.java)!!
+                onComplete(user.registrationTokens)
+            }
+            .addOnFailureListener { e ->
+                Log.e(
+                    Constants.TAG,
+                    "Fetching FCM registration token failed.",
+                    e
+                )
+            }
+    }
+
+    /**
+     * A function that gets the registration fcm tokens from the registered user in the FireStore
+     * database.
+     *
+     * @param registrationTokens todo
+     */
+    fun setFCMRegistrationToken(registrationTokens: MutableList<String>) {
+        dbFirestore.collection(Constants.COLLECTION_USERS)
+            .document(getCurrentUserID())
+            .update(mapOf(Constants.FIELD_REGISTRATION_TOKENS to registrationTokens))
+            .addOnFailureListener { e ->
+                Log.e(
+                    Constants.TAG,
+                    "Update of FCM registration tokens failed.",
+                    e
+                )
+            }
+    }
+
     /**
      * A function to update the existing user details to the cloud firestore.
      *
      * @param activity Base class
-     * @param userInfo Which fields are to be updated.
+     * @param userHashMap Which fields are to be updated.
      */
-    fun updateProfile(activity: EditProfileActivity, userInfo: User) {
+    fun updateProfile(activity: EditProfileActivity, userHashMap: HashMap<String, Any>) {
 
         dbFirestore.collection(Constants.COLLECTION_ADDRESSES)
             .document(getCurrentUserID())
             // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge
-            .set(userInfo, SetOptions.merge())
+            .set(userHashMap, SetOptions.merge())
             .addOnSuccessListener {
 
                 // Here call a function of base activity for transferring the result to it.
@@ -180,12 +217,11 @@ class FirestoreHelper {
     }
 
     /**
-     * A function to get the problems list from cloud firestore.
+     * A function to get all the submissions list from cloud firestore.
      *
      * @param fragment The fragment is passed as parameter as the function is called from fragment and need to the success result.
      */
-    fun getProblemsList(fragment: Fragment) {
-        // The collection name for PRODUCTS
+    fun getAllSubmissionsList(fragment: Fragment) {
         dbFirestore.collection(Constants.COLLECTION_SUBMISSIONS)
             .get() // Will get the documents snapshots.
             .addOnSuccessListener { document ->
@@ -194,7 +230,7 @@ class FirestoreHelper {
                 Log.d("All Submissions List", document.documents.toString())
 
                 // Here we have created a new instance for Submissions ArrayList.
-                val submissionsList: ArrayList<Submission> = ArrayList()
+                val allSubmissionsList: ArrayList<Submission> = ArrayList()
 
                 // A for loop as per the list of documents to convert them into Submissions ArrayList.
                 for (i in document.documents) {
@@ -202,11 +238,14 @@ class FirestoreHelper {
                     val submission = i.toObject(Submission::class.java)
                     submission!!.id = i.id
 
-                    submissionsList.add(submission)
+                    allSubmissionsList.add(submission)
                 }
                 when (fragment) {
                     is HomeFragment -> {
-                        fragment.successProblemsListFromFireStore(submissionsList)
+                        fragment.successProblemsListFromFireStore(allSubmissionsList)
+                    }
+                    is AllSubmissionsFragment -> {
+                        fragment.successAllSubmissionsListFromFireStore(allSubmissionsList)
                     }
                     else -> {}
                 }
@@ -215,6 +254,9 @@ class FirestoreHelper {
                 // Hide the progress dialog if there is any error based on the base class instance.
                 when (fragment) {
                     is HomeFragment -> {
+                        // TODO: Show error state maybe
+                    }
+                    is AllSubmissionsFragment -> {
                         // TODO: Show error state maybe
                     }
                 }
@@ -228,7 +270,7 @@ class FirestoreHelper {
      *
      * @param fragmentSubmissions The fragment is passed as parameter as the function is called from fragment and need to the success result.
      */
-    fun getUserSubmissionsList(fragmentSubmissions: SubmissionsFragment) {
+    fun getUserSubmissionsList(fragmentSubmissions: MySubmissionsFragment) {
         dbFirestore.collection(Constants.COLLECTION_SUBMISSIONS)
             .whereEqualTo(Constants.FIELD_USER_ID, getCurrentUserID())
             .orderBy(Constants.FIELD_DATE_ADDED, Query.Direction.DESCENDING)
@@ -290,10 +332,9 @@ class FirestoreHelper {
                             is AddSubmissionActivity -> {
                                 activity.imageUploadSuccess(uri.toString())
                             }
-
-                            /*is EditProfileActivity -> {
+                            is EditProfileActivity -> {
                                 activity.imageUploadSuccess(uri.toString())
-                            }*/
+                            }
                         }
                     }
             }

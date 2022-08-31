@@ -20,6 +20,8 @@ data class User(
     val phoneNumber: String = "",
     val phoneCode: Int = 0,
 
+    val registrationTokens: MutableList<String> = mutableListOf(),
+
     @ServerTimestamp
     val dateRegistered: Date = Date(),
     val role: String = "",

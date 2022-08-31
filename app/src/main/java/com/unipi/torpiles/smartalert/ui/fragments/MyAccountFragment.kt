@@ -12,6 +12,7 @@ import com.unipi.torpiles.smartalert.databinding.FragmentMyAccountBinding
 import com.unipi.torpiles.smartalert.models.User
 import com.unipi.torpiles.smartalert.ui.activities.MainActivity
 import com.unipi.torpiles.smartalert.utils.Constants
+import com.unipi.torpiles.smartalert.utils.GlideLoader
 import com.unipi.torpiles.smartalert.utils.IntentUtils
 
 class MyAccountFragment : BaseFragment() {
@@ -95,15 +96,31 @@ class MyAccountFragment : BaseFragment() {
             textViewFullName.text = mUserDetails.fullName
             textViewEmailValue.text = mUserDetails.email
             textViewDateRegisteredValue.text = Constants.standardSimpleDateFormat.format(mUserDetails.dateRegistered)
+            if (mUserDetails.notifications)
+                textViewNotificationsValue.text = requireContext().getString(R.string.yes)
+            else
+                textViewNotificationsValue.text = requireContext().getString(R.string.no)
 
-            // If some details aren't set by the user we completely remove the view instead of
-            // showing a blank view.
-            if (mUserDetails.phoneNumber != "")
+
+            /**
+             * If some details aren't set by the user we completely remove the view instead of
+             * showing a blank view.
+             *
+             */
+            // Phone Number.
+            if (mUserDetails.phoneNumber.isNotEmpty())
                 if (mUserDetails.phoneCode.toString() != "")
                     textViewPhoneValue.text = String.format(getString(R.string.txt_format_phone), mUserDetails.phoneCode, mUserDetails.phoneNumber)
                 else
                     textViewPhoneValue.text = mUserDetails.phoneNumber
             else textViewPhoneValue.text = getString(R.string.txt_none)
+
+            // Profile Image picture.
+            if (mUserDetails.profImgUrl.isNotEmpty())
+                GlideLoader(this@MyAccountFragment.requireContext()).loadUserPicture(
+                    mUserDetails.profImgUrl,
+                    binding.circleImageViewUserPicture
+                )
         }
 
         unveilDetails()

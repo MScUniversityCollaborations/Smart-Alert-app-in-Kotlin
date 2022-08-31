@@ -17,30 +17,45 @@
         android:usesCleartextTraffic="true">
 
         <!--
-             TODO: Before you run your application, you need a Google Maps API key.
-
-             To get one, follow the directions here:
-
-                https://developers.google.com/maps/documentation/android-sdk/get-api-key
-
-             Once you have your API key (it starts with "AIza"), define a new property in your
-             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
-             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+             Google API setup
+             https://developers.google.com/maps/documentation/android-sdk/get-api-key
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBGSfnL6FaVScHUPN9oN8T1v6MkRXp715w" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+        <!-- [START fcm_default_icon] -->
+            <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+                 See README(https://goo.gl/l4GJaQ) for more. -->
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/ic_stat_name" />
+            <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+                 notification message. See README(https://goo.gl/6BKBk7) for more. -->
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorAccent" />
+            <!-- [END fcm_default_icon] -->
+            <!-- [START fcm_default_channel] -->
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_channel_id"
+                android:value="@string/default_notification_channel_id" />
+        <!-- [END fcm_default_channel] -->
+
         <!-- region [START Activities] -->
-            <!-- Splash Screen Activity -->
+
+            <!-- Home/Main Activity -->
             <activity
-                android:name="com.unipi.torpiles.smartalert.ui.activities.SplashActivity"
-                android:theme="@style/Theme.Main.NoActionBar"
-                android:screenOrientation="fullSensor"
+                android:name="com.unipi.torpiles.smartalert.ui.activities.MainActivity"
+                android:theme="@style/Theme.Main.NoActionBar3"
                 android:exported="true">
+
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />
 
@@ -48,79 +63,73 @@
                 </intent-filter>
             </activity>
 
-            <!-- Home/Main Activity -->
-            <activity
-                android:name="com.unipi.torpiles.smartalert.ui.activities.MainActivity"
-                android:theme="@style/Theme.Main.NoActionBar3">
-            </activity>
-
             <!-- Problem Details Activity -->
             <activity
-                android:name="com.unipi.torpiles.smartalert.ui.activities.SubmissionDetailsActivity"
+                android:name=".ui.activities.SubmissionDetailsActivity"
                 android:theme="@style/Theme.Main.NoActionBar3"
-                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.MainActivity"
+                android:parentActivityName=".ui.activities.MainActivity"
                 android:exported="true">
 
                 <intent-filter>
-                    <action android:name="ProductDetailsActivity"/>
+                    <action android:name="SubmissionDetailsActivity"/>
                     <category android:name="android.intent.category.DEFAULT"/>
                 </intent-filter>
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.torpiles.smartalert.ui.activities.MainActivity" />
+                    android:value=".ui.activities.MainActivity" />
             </activity>
 
             <!-- Sign In activity -->
             <activity
-                android:name="com.unipi.torpiles.smartalert.ui.activities.SignInActivity"
+                android:name=".ui.activities.SignInActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.MainActivity">
+                android:parentActivityName=".ui.activities.MainActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.torpiles.smartalert.ui.activities.MainActivity" />
+                    android:value=".ui.activities.MainActivity" />
             </activity>
 
             <!-- Sign Up activity -->
             <activity
-                android:name="com.unipi.torpiles.smartalert.ui.activities.SignUpActivity"
+                android:name=".ui.activities.SignUpActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.SignInActivity">
+                android:parentActivityName=".ui.activities.SignInActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.torpiles.smartalert.ui.activities.SignInActivity" />
+                    android:value=".ui.activities.SignInActivity" />
             </activity>
 
             <!-- Add submission activity -->
             <activity
-                android:name="com.unipi.torpiles.smartalert.ui.activities.AddSubmissionActivity"
+                android:name=".ui.activities.AddSubmissionActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.MainActivity">
+                android:parentActivityName=".ui.activities.MainActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.torpiles.smartalert.ui.activities.MainActivity" />
+                    android:value=".ui.activities.MainActivity" />
             </activity>
 
             <!-- Forgot Password activity -->
             <activity
-                android:name="com.unipi.torpiles.smartalert.ui.activities.ForgotPasswordActivity"
+                android:name=".ui.activities.ForgotPasswordActivity"
                 android:launchMode="singleTask"
                 android:windowSoftInputMode="adjustResize"
                 android:theme="@style/Theme.Main.NoActionBar4"
-                android:parentActivityName="com.unipi.torpiles.smartalert.ui.activities.SignInActivity">
+                android:parentActivityName=".ui.activities.SignInActivity">
 
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.unipi.torpiles.smartalert.ui.activities.SignInActivity" />
+                    android:value=".ui.activities.SignInActivity" />
             </activity>
 
             <!-- Update Profile activity -->
@@ -135,7 +144,18 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.unipi.torpiles.smartalert.ui.activities.SignInActivity" />
             </activity>
-
         <!-- endregion [END Activities] -->
+
+        <!-- [START firebase_service] -->
+        <service
+            android:name=".services.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+
+        <receiver android:name=".services.NotificationReceiver"/>
     </application>
 </manifest>

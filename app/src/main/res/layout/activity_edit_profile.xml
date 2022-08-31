@@ -47,8 +47,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/inputTxtLayout_Full_Name">
 
-                    <View
-                        android:id="@+id/view_User_Picture"
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageViewUserPicture"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -61,9 +61,7 @@
                         android:layout_margin="0dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/shape_user_profile_frame" />
-
                 </FrameLayout>
-
 
                 <TextView
                     android:id="@+id/textView_Full_Name"
@@ -165,9 +163,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginBottom="32dp"
                     app:hintEnabled="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/frameLayout_User_Picture"
                     app:layout_constraintStart_toEndOf="@+id/countryCodePicker"
                     app:layout_constraintTop_toTopOf="@+id/countryCodePicker">
@@ -183,6 +179,78 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <TextView
+                    android:id="@+id/textViewNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/core_sans_cr_55_medium"
+                    android:text="@string/notifications"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:layout_marginTop="29dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/countryCodePicker"
+                    app:layout_constraintTop_toBottomOf="@+id/inputTxtLayout_Phone_Number" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewNotifications">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radioButtonNotificationsYes"
+                        style="@style/TextViewMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/drawable_radio_button_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/yes"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/drawable_radio_button_text_color_selector"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radioButtonNotificationsNo"
+                        style="@style/TextViewMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drawable_radio_button_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/no"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/drawable_radio_button_text_color_selector"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textViewNotificationsAbout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="32dp"
+                    android:fontFamily="@font/core_sans_cr_45_regular"
+                    android:text="@string/notifications_when_high_danger"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/radioGroupNotifications"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroupNotifications"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroupNotifications" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

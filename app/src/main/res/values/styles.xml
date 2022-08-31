@@ -119,4 +119,12 @@
         <item name="android:padding">0dp</item>
     </style>
 
+    <style name="TextViewMedium">
+        <item name="android:fontFamily">@font/core_sans_cr_55_medium</item>
+        <item name="android:textColor">@color/colorSecondary3</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">start</item>
+    </style>
+
 </resources>

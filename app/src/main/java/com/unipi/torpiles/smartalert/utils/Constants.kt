@@ -8,15 +8,13 @@ import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.Uri
-import android.os.Build
 import android.provider.MediaStore
 import android.webkit.MimeTypeMap
-import androidx.core.content.ContextCompat.getSystemService
+import androidx.activity.result.ActivityResultLauncher
 import com.google.android.material.behavior.SwipeDismissBehavior
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.acos
 
 
 // Create a custom object to declare all the constant values in a single file. The constant values declared here is can be used in whole application.
@@ -26,10 +24,10 @@ import kotlin.math.acos
 object Constants {
 
     // Default Constants
+    const val TAG: String = "[SmartAlert]"
     const val DEFAULT_VEILED_ITEMS_VERTICAL: Int = 15
     val SNACKBAR_BEHAVIOR = BaseTransientBottomBar.Behavior().apply {
         setSwipeDirection(SwipeDismissBehavior.SWIPE_DIRECTION_ANY) }
-
     //A unique code for asking the Read Storage Permission using this we will be check and identify in the method onRequestPermissionsResult in the Base Activity.
     const val READ_STORAGE_PERMISSION_CODE = 2
     //A unique code for asking the Location Permissions using this we will be check and identify in the method onRequestPermissionsResult in the Base Activity.
@@ -47,11 +45,21 @@ object Constants {
     const val COLLECTION_SUBMISSIONS: String = "submissions"
     const val COLLECTION_ADDRESSES: String = "addresses"
 
-    // Fields
+    // DB Fields
+    // COMMON
     const val FIELD_DATE_ADDED: String = "dateAdded"
-    const val FIELD_USER_ID: String = "userId"
+    // SUBMISSIONS
     const val FIELD_SUBMISSION_ID: String = "submissionId"
     const val SUBMISSION_IMAGE: String = "SUBMISSION_IMAGE"
+    // USER
+    const val FIELD_USER_ID: String = "userId"
+    const val FIELD_FULL_NAME: String = "fullName"
+    const val FIELD_NOTIFICATIONS: String = "notifications"
+    const val FIELD_IMG_URL: String = "imgUrl"
+    const val FIELD_COMPLETE_PROFILE: String = "profileCompleted"
+    const val FIELD_PHONE_NUMBER: String = "phoneNumber"
+    const val FIELD_PHONE_CODE: String = "phoneCode"
+    const val FIELD_REGISTRATION_TOKENS: String = "registrationTokens"
 
     // Intent Extras
     const val EXTRA_SUBMISSION_ID: String = "extraSubmissionId"
@@ -61,10 +69,21 @@ object Constants {
     const val EXTRA_USER_EMAIL: String = "extraUserEmail"
     const val EXTRA_USER_DETAILS: String = "extraUserDetails"
     const val EXTRA_SHOW_SUBMISSION_CREATED_SNACKBAR= "extraSubmissionCreatedSnackbar"
+    const val EXTRA_NOTIFICATION_ID: String = "extraNotificationId"
+
+    // Notifications
+    const val PAYLOAD_SUBMISSION_ID: String = "SUBMISSION_ID"
+    const val PAYLOAD_SUBMISSION_IMG_URL: String = "SUBMISSION_IMG_URL"
+    const val PAYLOAD_SUBMISSION_DESC: String = "SUBMISSION_DESC"
+    const val GROUP_KEY_FAVORITES: String = "com.unipi.torpiles.smartalert.submissions"
+    const val NOTIFICATION_CHANNEL_ID: String = "com.unipi.torpiles.smartalert"
+    const val NOTIFICATION_ID : Int = 100
 
     // Other
     const val STORAGE_PATH_USERS: String = "Users/"
     const val STORAGE_PATH_SUBMISSIONS: String = "Submissions/"
+    const val ROLE_MEMBER = "Member"
+    const val ROLE_ADMIN = "Admin"
 
     /**
      * A function for user profile image selection from phone storage.
@@ -77,6 +96,19 @@ object Constants {
         )
         // Launches the image selection of phone storage using the constant code.
         activity.startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST_CODE)
+    }
+
+    /**
+     * A function for user profile image selection from phone storage.
+     */
+    fun showImageChooserV2(activityResultLauncher: ActivityResultLauncher<Intent>) {
+        // An intent for launching the image selection of phone storage.
+        val galleryIntent = Intent(
+            Intent.ACTION_PICK,
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        )
+        // galleryIntent.type = "image/*"
+        activityResultLauncher.launch(galleryIntent)
     }
 
     /**
@@ -99,6 +131,11 @@ object Constants {
             .getExtensionFromMimeType(activity.contentResolver.getType(uri!!))
     }
 
+    /**
+     * A function to check internet connection.
+     *
+     * @param context Context reference.
+     */
     fun isNetworkConnected(context: Context): Boolean {
         val cm = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val n: Network? = cm.activeNetwork

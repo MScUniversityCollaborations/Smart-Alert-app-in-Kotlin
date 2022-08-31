@@ -21,7 +21,9 @@ data class Submission(
     val category: String = "",
     val description: String = "",
     val imgUrl: String = "",
+    val dangerRank: Int = -1,
     val isHighDanger: Boolean = false,
+    val isAccepted: Boolean = false,
     @ServerTimestamp
     val dateAdded: Date = Date(),
     var id: String = "",

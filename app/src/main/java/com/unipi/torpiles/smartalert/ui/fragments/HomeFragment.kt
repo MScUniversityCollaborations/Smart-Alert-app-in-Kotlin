@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.gms.maps.*
-import com.unipi.torpiles.smartalert.R
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.unipi.torpiles.smartalert.R
 import com.unipi.torpiles.smartalert.database.FirestoreHelper
 import com.unipi.torpiles.smartalert.databinding.FragmentHomeBinding
 import com.unipi.torpiles.smartalert.models.Submission
@@ -45,7 +48,7 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback {
     }
 
     private fun loadProblems() {
-        FirestoreHelper().getProblemsList(this@HomeFragment)
+        FirestoreHelper().getAllSubmissionsList(this@HomeFragment)
     }
 
     fun successProblemsListFromFireStore(problemsList: ArrayList<Submission>) {

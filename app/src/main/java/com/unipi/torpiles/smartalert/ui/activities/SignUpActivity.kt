@@ -146,7 +146,7 @@ class SignUpActivity : BaseActivity() {
                                 firebaseUser.uid,
                                 inputTxtName.text.toString().trim { it <= ' ' },
                                 inputTxtEmail.text.toString().trim { it <= ' ' },
-                                role = getString(R.string.role_member)
+                                role = Constants.ROLE_MEMBER
                             )
 
 

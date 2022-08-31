@@ -43,7 +43,7 @@ class AddSubmissionActivity : BaseActivity() {
     // Add a global variable for URI of a selected image from phone storage.
     private var mSelectedImageFileUri: Uri? = null
 
-    private var mUserProfileImageURL: String = ""
+    private var mSubmissionImageURL: String = ""
 
     private lateinit var locationRequest: LocationRequest
 
@@ -246,6 +246,7 @@ class AddSubmissionActivity : BaseActivity() {
         }
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
     }
+
     /**
      * A function to validate the entries of a new user.
      */
@@ -306,7 +307,7 @@ class AddSubmissionActivity : BaseActivity() {
                     location.split(", ")[1],
                     category,
                     description,
-                    mUserProfileImageURL
+                    mSubmissionImageURL
                 )
 
                 FirestoreHelper().addSubmission(this@AddSubmissionActivity, mSubmission)
@@ -356,7 +357,7 @@ class AddSubmissionActivity : BaseActivity() {
      * @param imageURL After successful upload the Firebase Cloud returns the URL.
      */
     fun imageUploadSuccess(imageURL: String) {
-        mUserProfileImageURL = imageURL
+        mSubmissionImageURL = imageURL
 
         submitUserProblem()
     }

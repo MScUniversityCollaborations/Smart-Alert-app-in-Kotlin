@@ -14,7 +14,7 @@ import com.unipi.torpiles.smartalert.models.Submission
 import com.unipi.torpiles.smartalert.utils.Constants
 import com.unipi.torpiles.smartalert.utils.IntentUtils
 
-class SubmissionsFragment : BaseFragment() {
+class MySubmissionsFragment : BaseFragment() {
     // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
     private var _binding: FragmentSubmissionsBinding? = null
     private val binding get() = _binding!!
@@ -39,13 +39,13 @@ class SubmissionsFragment : BaseFragment() {
                 // We make the sign in layout visible and add the button click listeners accordingly.
                 layoutMustBeSignedIn.apply {
                     root.visibility = View.VISIBLE
-                    btnSignIn.setOnClickListener{ goToSignInActivity(this@SubmissionsFragment.requireContext()) }
-                    txtViewSignUp.setOnClickListener{ goToSignUpActivity(this@SubmissionsFragment.requireContext()) }
+                    btnSignIn.setOnClickListener{ goToSignInActivity(this@MySubmissionsFragment.requireContext()) }
+                    txtViewSignUp.setOnClickListener{ goToSignUpActivity(this@MySubmissionsFragment.requireContext()) }
                 }
             }
         }
         else {
-            binding.fabAddNewSubmission.setOnClickListener { IntentUtils().goToAddSubmissionActivity(this@SubmissionsFragment.requireActivity()) }
+            binding.fabAddNewSubmission.setOnClickListener { IntentUtils().goToAddSubmissionActivity(this@MySubmissionsFragment.requireActivity()) }
 
             veilRecycler()
             loadSubmissions()
@@ -54,7 +54,7 @@ class SubmissionsFragment : BaseFragment() {
     }
 
     private fun loadSubmissions() {
-        FirestoreHelper().getUserSubmissionsList(this@SubmissionsFragment)
+        FirestoreHelper().getUserSubmissionsList(this@MySubmissionsFragment)
     }
 
     /**

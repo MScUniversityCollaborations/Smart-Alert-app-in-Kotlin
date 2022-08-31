@@ -48,16 +48,25 @@
                     app:tabTextColor="@color/colorTabs">
 
                     <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tabItemSubmissionsAroundMyArea"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:icon="@drawable/ic_global" />
 
                     <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tabItemGlobalSubmissions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:icon="@drawable/ic_global" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tabItemMySubmissions"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:icon="@drawable/ic_file_form" />
 
                     <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tabItemMyAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:icon="@drawable/ic_user_circle" />
