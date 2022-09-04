@@ -137,7 +137,7 @@ class SignInActivity : BaseActivity() {
             intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
             startActivity(intent)*/
 
-            goToMainActivity(this@SignInActivity, true)
+            goToMainActivity(this@SignInActivity, Constants.SHOW_PROFILE_NOT_COMPLETED_SNACK_BAR)
             finish()
         } else {
             // Redirect the user to Dashboard Screen after log in.

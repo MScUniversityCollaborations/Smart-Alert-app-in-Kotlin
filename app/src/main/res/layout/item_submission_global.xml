@@ -52,10 +52,8 @@
                 android:layout_height="100dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:elevation="10dp"
                 app:cardCornerRadius="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -76,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:drawablePadding="8dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/core_sans_cr_55_medium"
                 android:maxLines="1"
@@ -122,6 +121,28 @@
                 app:layout_constraintEnd_toEndOf="@+id/textView_Category"
                 app:layout_constraintStart_toStartOf="@+id/textView_Location"
                 app:layout_constraintTop_toBottomOf="@+id/textView_Category"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewByUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:drawablePadding="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/core_sans_cr_45_regular"
+                android:maxLines="1"
+                android:text="@string/txt_loading"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/txt_font_size_header_14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView_Desc"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/cardViewImage"
+                app:layout_constraintTop_toBottomOf="@+id/textView_Desc"
                 app:layout_constraintVertical_bias="0.0" />
 
             <androidx.constraintlayout.widget.ConstraintLayout

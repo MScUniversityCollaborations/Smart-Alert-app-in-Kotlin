@@ -29,16 +29,6 @@
             </group>
         </menu>
     </item>
-    <item android:title="@string/drawer_nav_bar_category_admin" android:visible="false" android:id="@+id/nav_drawer_group_admin">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_drawer_item_admin_submissions"
-                    android:icon="@drawable/ic_exit"
-                    android:title="@string/drawer_nav_bar_item_admin_submissions" />
-            </group>
-        </menu>
-    </item>
     <item android:title="@string/drawer_nav_bar_category_other">
         <menu>
             <group android:checkableBehavior="single">

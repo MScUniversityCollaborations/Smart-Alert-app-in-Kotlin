@@ -47,7 +47,7 @@
 
         <include
             android:id="@+id/layout_Empty_State"
-            layout="@layout/layout_empty_state_submissions"
+            layout="@layout/layout_empty_state_my_submissions"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"

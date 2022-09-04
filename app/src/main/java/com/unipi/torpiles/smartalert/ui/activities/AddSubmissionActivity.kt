@@ -29,6 +29,7 @@ import com.unipi.torpiles.smartalert.R
 import com.unipi.torpiles.smartalert.database.FirestoreHelper
 import com.unipi.torpiles.smartalert.databinding.ActivityAddSubmissionBinding
 import com.unipi.torpiles.smartalert.models.Submission
+import com.unipi.torpiles.smartalert.models.User
 import com.unipi.torpiles.smartalert.utils.*
 import com.unipi.torpiles.smartalert.utils.Constants.STORAGE_PATH_SUBMISSIONS
 import java.io.IOException
@@ -39,6 +40,7 @@ class AddSubmissionActivity : BaseActivity() {
 
     // A global variable for user submission.
     private lateinit var mSubmission: Submission
+    private lateinit var mUser: User
 
     // Add a global variable for URI of a selected image from phone storage.
     private var mSelectedImageFileUri: Uri? = null
@@ -90,27 +92,49 @@ class AddSubmissionActivity : BaseActivity() {
                 dialogSelectButton.setOnClickListener {
                     if (dialog.findViewById<RadioButton>(R.id.radioButtonNaturalDisasters).isChecked) {
                         inputTxtCategory.setText(getString(R.string.natural_disaster))
+                        switchHighDanger.isChecked = true
+                        switchHighDanger.isFocusable = false
+                        switchHighDanger.isClickable = false
                     }
                     else if (dialog.findViewById<RadioButton>(R.id.radioButtonWaterFlood).isChecked) {
                         inputTxtCategory.setText(getString(R.string.water_flood))
+                        switchHighDanger.isChecked = true
+                        switchHighDanger.isFocusable = false
+                        switchHighDanger.isClickable = false
                     }
                     else if (dialog.findViewById<RadioButton>(R.id.radioButtonTsunami).isChecked) {
                         inputTxtCategory.setText(getString(R.string.tsunami))
+                        switchHighDanger.isChecked = true
+                        switchHighDanger.isFocusable = false
+                        switchHighDanger.isClickable = false
                     }
                     else if (dialog.findViewById<RadioButton>(R.id.radioButtonFire).isChecked) {
                         inputTxtCategory.setText(getString(R.string.fire))
+                        switchHighDanger.isChecked = true
+                        switchHighDanger.isFocusable = false
+                        switchHighDanger.isClickable = false
                     }
                     else if (dialog.findViewById<RadioButton>(R.id.radioButtonRobbery).isChecked) {
                         inputTxtCategory.setText(getString(R.string.robbery))
+                        switchHighDanger.isChecked = true
+                        switchHighDanger.isFocusable = false
+                        switchHighDanger.isClickable = false
                     }
                     else if (dialog.findViewById<RadioButton>(R.id.radioButtonFog).isChecked) {
                         inputTxtCategory.setText(getString(R.string.fog))
+                        switchHighDanger.isFocusable = true
+                        switchHighDanger.isClickable = true
                     }
                     else if (dialog.findViewById<RadioButton>(R.id.radioButtonDamages).isChecked) {
                         inputTxtCategory.setText(getString(R.string.damages))
+                        switchHighDanger.isFocusable = true
+                        switchHighDanger.isClickable = true
                     }
                     else if (dialog.findViewById<RadioButton>(R.id.radioButtonOther).isChecked) {
                         inputTxtCategory.setText(getString(R.string.other))
+                        switchHighDanger.isFocusable = true
+                        switchHighDanger.isClickable = true
+
                     }
                     else {
                         inputTxtCategory.setText("")
@@ -180,10 +204,15 @@ class AddSubmissionActivity : BaseActivity() {
             ) == PackageManager.PERMISSION_GRANTED
         ) {
             if (isGPSEnabled()) {
+                // Show the progress dialog.
+                showProgressDialog()
+
                 LocationServices.getFusedLocationProviderClient(this@AddSubmissionActivity)
                     .requestLocationUpdates(locationRequest, object : LocationCallback() {
                         override fun onLocationResult(@NonNull locationResult: LocationResult) {
+                            hideProgressDialog()
                             super.onLocationResult(locationResult)
+
                             LocationServices.getFusedLocationProviderClient(this@AddSubmissionActivity)
                                 .removeLocationUpdates(this)
                             if (locationResult.locations
@@ -212,8 +241,8 @@ class AddSubmissionActivity : BaseActivity() {
         builder.setAlwaysShow(true)
         val result: Task<LocationSettingsResponse> = LocationServices.getSettingsClient(
             applicationContext
-        )
-            .checkLocationSettings(builder.build())
+        ).checkLocationSettings(builder.build())
+
         result.addOnCompleteListener {
             try {
                 // val response = task.getResult(ApiException::class.java)
@@ -288,6 +317,16 @@ class AddSubmissionActivity : BaseActivity() {
         }
     }
 
+    private fun loadUserModel() {
+        FirestoreHelper().getUserDetails(this@AddSubmissionActivity)
+    }
+
+    fun userModelSuccess(userModel: User) {
+        mUser = userModel
+
+        submitUserProblem()
+    }
+
     /**
      * A function to submit user's problem to Firestore
      */
@@ -302,12 +341,15 @@ class AddSubmissionActivity : BaseActivity() {
                 val category: String = inputTxtCategory.text.toString().trim { it <= ' ' }
 
                 mSubmission = Submission(
-                    FirestoreHelper().getCurrentUserID(),
-                    location.split(", ")[0],
-                    location.split(", ")[1],
-                    category,
-                    description,
-                    mSubmissionImageURL
+                    userId = FirestoreHelper().getCurrentUserID(),
+                    user = mUser,
+                    lat = location.split(", ")[0],
+                    long = location.split(", ")[1],
+                    category = category,
+                    description = description,
+                    imgUrl = mSubmissionImageURL,
+                    accepted = false,
+                    highDanger = switchHighDanger.isChecked
                 )
 
                 FirestoreHelper().addSubmission(this@AddSubmissionActivity, mSubmission)
@@ -359,7 +401,8 @@ class AddSubmissionActivity : BaseActivity() {
     fun imageUploadSuccess(imageURL: String) {
         mSubmissionImageURL = imageURL
 
-        submitUserProblem()
+        loadUserModel()
+        // submitUserProblem()
     }
 
     /**

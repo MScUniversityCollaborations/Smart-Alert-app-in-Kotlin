@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.unipi.torpiles.smartalert.adapters.SubmissionsListAdapter
+import com.unipi.torpiles.smartalert.adapters.AllSubmissionsListAdapter
 import com.unipi.torpiles.smartalert.database.FirestoreHelper
 import com.unipi.torpiles.smartalert.databinding.FragmentAllSubmissionsBinding
 import com.unipi.torpiles.smartalert.models.Submission
@@ -53,7 +53,7 @@ class AllSubmissionsFragment : BaseFragment() {
             // sets VeilRecyclerView's properties
             binding.veilRecyclerView.run {
                 setAdapter(
-                    SubmissionsListAdapter(
+                    AllSubmissionsListAdapter(
                         requireActivity(),
                         submissionsList
                     )

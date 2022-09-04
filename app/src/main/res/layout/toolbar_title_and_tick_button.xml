@@ -33,14 +33,15 @@
                     android:id="@+id/textView_ActionBar_Label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_edit_profile"
+                    android:text="title"
                     android:textSize="@dimen/txt_font_size_action_bar_20"
                     android:textColor="@color/colorWhite"
                     android:fontFamily="@font/core_sans_cr_55_medium"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -63,7 +63,7 @@
                 </intent-filter>
             </activity>
 
-            <!-- Problem Details Activity -->
+            <!-- Submission Details Activity -->
             <activity
                 android:name=".ui.activities.SubmissionDetailsActivity"
                 android:theme="@style/Theme.Main.NoActionBar3"

@@ -15,6 +15,7 @@ import java.util.*
 @IgnoreExtraProperties
 data class Submission(
     var userId: String = "",
+    val user: User = User(),
 
     val lat: String = "",
     val long: String = "",
@@ -22,8 +23,8 @@ data class Submission(
     val description: String = "",
     val imgUrl: String = "",
     val dangerRank: Int = -1,
-    val isHighDanger: Boolean = false,
-    val isAccepted: Boolean = false,
+    val highDanger: Boolean = false,
+    var accepted: Boolean = false,
     @ServerTimestamp
     val dateAdded: Date = Date(),
     var id: String = "",

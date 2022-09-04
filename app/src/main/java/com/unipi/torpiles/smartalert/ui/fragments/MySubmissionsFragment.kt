@@ -7,16 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.unipi.torpiles.smartalert.adapters.SubmissionsListAdapter
+import com.unipi.torpiles.smartalert.adapters.MySubmissionsListAdapter
 import com.unipi.torpiles.smartalert.database.FirestoreHelper
-import com.unipi.torpiles.smartalert.databinding.FragmentSubmissionsBinding
+import com.unipi.torpiles.smartalert.databinding.FragmentMySubmissionsBinding
 import com.unipi.torpiles.smartalert.models.Submission
 import com.unipi.torpiles.smartalert.utils.Constants
 import com.unipi.torpiles.smartalert.utils.IntentUtils
 
 class MySubmissionsFragment : BaseFragment() {
     // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
-    private var _binding: FragmentSubmissionsBinding? = null
+    private var _binding: FragmentMySubmissionsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -24,7 +24,7 @@ class MySubmissionsFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSubmissionsBinding.inflate(inflater, container, false)
+        _binding = FragmentMySubmissionsBinding.inflate(inflater, container, false)
 
         init()
 
@@ -71,7 +71,7 @@ class MySubmissionsFragment : BaseFragment() {
             // sets VeilRecyclerView's properties
             binding.veilRecyclerView.run {
                 setAdapter(
-                    SubmissionsListAdapter(
+                    MySubmissionsListAdapter(
                         requireActivity(),
                         submissionsList
                     )

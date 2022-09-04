@@ -188,8 +188,9 @@
     <string name="txt_no_addresses">No addresses found!</string>
     <string name="txt_no_problems">No problems found!</string>
     <string name="txt_no_problems_2">No problems or disasters found!</string>
-    <string name="txt_no_submits">No submissions found!</string>
-    <string name="txt_no_submits_2">You haven\'t submitted any problem, click the button below to add a new one!</string>
+    <string name="txt_no_my_submits">No submissions found!</string>
+    <string name="txt_no_my_submits_2">You haven\'t submitted any problem, click the button below to add a new one!</string>
+    <string name="txt_no_submits_found">Looks like there are no submissions!\nEveryone must be safe 🎉</string>
     <string name="txt_address_deleted_confirmation">Your address has been deleted successfully!</string>
     <string name="txt_your_address_added_successfully">Your address has been successfully added!</string>
     <string name="txt_your_address_updated_successfully">Your address has been successfully updated!</string>
@@ -203,10 +204,12 @@
     <string name="txt_global_problems">Global Problems</string>
     <string name="area_problems">Area Problems</string>
     <string name="txt_my_submissions">My Submissions</string>
+    <string name="txt_all_submissions">All Submissions</string>
     <string name="content_description_button">Button</string>
     <string name="image_selection_failed">Image selection Failed!</string>
     <string name="read_storage_permission_denied">Oops, you just denied the permission for storage. You can also allow it from settings.</string>
     <string name="submission_created_successfully">Submission has been created successfully!\nNow our staff will verify it!</string>
+    <string name="submission_updated_successfully">Submission has been updated successfully!</string>
     <string name="category">Category</string>
     <string name="select">SELECT</string>
 
@@ -225,6 +228,10 @@
     <string name="format_location_details" translatable="false">%1$s, %2$s</string>
     <string name="format_location_lat_long" translatable="false">%1$s, %2$s</string>
     <string name="format_category">"Category: %1$s"</string>
+    <string name="format_added_by">"Added By:\n%1$s"</string>
+    <string name="format_description">"User\'s Description:\n%1$s"</string>
+    <string name="verified">Verified</string>
+    <string name="not_verified">Not Verified</string>
     <string name="format_danger_rank">"Rank: %1$s"</string>
     <string name="gps_already_on">GPS is already turned on</string>
     <string name="category_red_warning">Categories with the warning icon indicate high danger!</string>
@@ -238,6 +245,7 @@
     <string name="notification_payload_fav_body">%1$s is now available in stock 😍</string>
     <string name="notification_add_to_cart">Add to cart</string>
     <string name="notification_mark_as_read">Mark as read</string>
+    <string name="unranked">Unranked</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 

@@ -20,6 +20,7 @@ import com.unipi.torpiles.smartalert.ui.fragments.MyAccountFragment
 import com.unipi.torpiles.smartalert.ui.fragments.MySubmissionsFragment
 import com.unipi.torpiles.smartalert.utils.Constants
 
+
 class FirestoreHelper {
 
     // Access a Cloud Firestore instance.
@@ -157,12 +158,29 @@ class FirestoreHelper {
                         // Call a function of base activity for transferring the result to it.
                         activity.userLoggedInSuccess(user)
                     }
+                    is AddSubmissionActivity -> {
+                        // Call a function of base activity for transferring the result to it.
+                        activity.userModelSuccess(user)
+                    }
+                    is SubmissionDetailsActivity -> {
+                        // Call a function of base activity for transferring the result to it.
+                        activity.userModelSuccess(user)
+                    }
                 }
             }
             .addOnFailureListener { e ->
                 // Hide the progress dialog if there is any error. And print the error in log.
                 when (activity) {
                     is SignInActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is MainActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is AddSubmissionActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is SubmissionDetailsActivity -> {
                         activity.hideProgressDialog()
                     }
                 }
@@ -372,7 +390,6 @@ class FirestoreHelper {
             // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge
             .set(submission, SetOptions.merge())
             .addOnSuccessListener {
-
                 when (context) {
                     is AddSubmissionActivity -> context.submitUserProblemSuccess()
                 }
@@ -386,6 +403,33 @@ class FirestoreHelper {
                 Log.e(
                     context.javaClass.simpleName,
                     "Error while adding a submission.",
+                    e
+                )
+            }
+    }
+
+    fun changeSubmissionStatus(activity: Activity, submission: Submission, acceptOrDecline: Boolean) {
+        submission.accepted = acceptOrDecline
+
+        dbFirestore.collection(Constants.COLLECTION_SUBMISSIONS)
+            .document(submission.id)
+            // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge
+            .set(submission, SetOptions.merge())
+            .addOnSuccessListener {
+
+                // Here call a function of base activity for transferring the result to it.
+                when (activity) {
+                    is SubmissionDetailsActivity -> activity.successUpdateSubmissionToFirestore()
+                }
+            }
+            .addOnFailureListener { e ->
+                when (activity) {
+                    is SubmissionDetailsActivity -> activity.hideProgressDialog()
+                }
+                // And then print an error log.
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while updating Submission.",
                     e
                 )
             }

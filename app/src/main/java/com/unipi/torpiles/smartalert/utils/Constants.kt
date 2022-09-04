@@ -66,10 +66,13 @@ object Constants {
     const val EXTRA_SUBMISSION_MODEL: String = "extraSubmissionModel"
     const val EXTRA_REG_USERS_SNACKBAR: String = "extraShowRegisteredUserSnackbar"
     const val EXTRA_PROFILE_NOT_COMPLETED_SNACKBAR: String = "extraShowProfileNotCompletedSnackbar"
+    const val EXTRA_SUBMISSION_UPDATED_SNACKBAR: String = "extraShowSubmissionUpdatedSnackbar"
     const val EXTRA_USER_EMAIL: String = "extraUserEmail"
     const val EXTRA_USER_DETAILS: String = "extraUserDetails"
     const val EXTRA_SHOW_SUBMISSION_CREATED_SNACKBAR= "extraSubmissionCreatedSnackbar"
     const val EXTRA_NOTIFICATION_ID: String = "extraNotificationId"
+    const val SHOW_PROFILE_NOT_COMPLETED_SNACK_BAR: String = "showProfileNotCompletedSnackBar"
+    const val SHOW_SUBMISSION_UPDATED_SNACK_BAR: String = "showSubmissionUpdatedSnackBar"
 
     // Notifications
     const val PAYLOAD_SUBMISSION_ID: String = "SUBMISSION_ID"

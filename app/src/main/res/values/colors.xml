@@ -40,5 +40,6 @@
     <color name="colorRedDark">#A31526</color>
     <color name="colorRedLight">#F34949</color>
 
+    <color name="colorGreen">#29C17E</color>
     <color name="colorTransparent">#00FFFFFF</color>
 </resources>

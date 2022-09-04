@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.activities."
+    tools:ignore="ContentDescription">
+
+
+            <ImageView
+                android:id="@+id/img_Header"
+                android:layout_width="@dimen/img_splash_screen_width_180"
+                android:layout_height="@dimen/img_splash_screen_height_180"
+                android:layout_marginTop="92dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mailbox" />
+
+            <TextView
+                android:id="@+id/txt_Header_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/core_sans_cr_55_medium"
+                android:text="@string/txt_no_my_submits"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_font_size_header_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_Header" />
+
+            <TextView
+                android:id="@+id/txt_Header_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/core_sans_cr_45_regular"
+                android:text="@string/txt_no_my_submits_2"
+                android:textAlignment="center"
+                android:textColor="@color/colorText2"
+                android:textSize="@dimen/txt_font_size_header_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Header_1" />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

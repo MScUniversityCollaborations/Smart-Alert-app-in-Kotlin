@@ -44,6 +44,12 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 .make(binding.root, getString(R.string.submission_created_successfully))
                 .show()
         }
+        else if (intent.hasExtra(Constants.EXTRA_SUBMISSION_UPDATED_SNACKBAR)
+            && intent.getBooleanExtra(Constants.EXTRA_SUBMISSION_UPDATED_SNACKBAR, false)) {
+            SnackBarSuccessClass
+                .make(binding.root, getString(R.string.submission_updated_successfully))
+                .show()
+        }
     }
 
     private fun setupUI() {
@@ -97,7 +103,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.apply {
             viewPagerHomeActivity.adapter = adapter
 
-            TabLayoutMediator(tabs, viewPagerHomeActivity){tab, position ->
+            TabLayoutMediator(tabs, viewPagerHomeActivity) { tab, position ->
                 when (position) {
                     0 -> tab.setIcon(R.drawable.svg_location_pin)
                     1 -> tab.setIcon(R.drawable.ic_global)
@@ -160,11 +166,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
             // Check if user is ADMIN and then show the admin features in nav drawer bar.
             if (userInfo.role == Constants.ROLE_ADMIN) {
-                navView.menu.findItem(R.id.nav_drawer_group_admin).isVisible = true
                 // And also add the admin icon next to the name in nav drawer header.
                 navView.getHeaderView(0).apply {
                     findViewById<TextView>(R.id.navDrawer_SignedIn_Full_Name)
-                        .setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.svg_admin_icon, 0, 0,0)
+                        .setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.svg_admin_icon, 0)
                 }
             }
         }
