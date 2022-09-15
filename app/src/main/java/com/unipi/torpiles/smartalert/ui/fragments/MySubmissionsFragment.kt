@@ -50,7 +50,6 @@ class MySubmissionsFragment : BaseFragment() {
             veilRecycler()
             loadSubmissions()
         }
-        
     }
 
     private fun loadSubmissions() {

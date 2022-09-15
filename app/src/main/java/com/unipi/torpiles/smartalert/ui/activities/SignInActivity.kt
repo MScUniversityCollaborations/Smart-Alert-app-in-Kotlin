@@ -7,6 +7,7 @@ import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.animation.AnimationUtils
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.messaging.FirebaseMessaging
 import com.unipi.torpiles.smartalert.R
 import com.unipi.torpiles.smartalert.database.FirestoreHelper
 import com.unipi.torpiles.smartalert.databinding.ActivitySignInBinding
@@ -99,7 +100,9 @@ class SignInActivity : BaseActivity() {
                         .addOnCompleteListener { task ->
 
                             if (task.isSuccessful) {
-                                FirestoreHelper().getUserDetails(this@SignInActivity)
+                                // Save token.
+
+                                FirestoreHelper().saveFCMToken(this@SignInActivity)
                             } else {
                                 // Hide the progress dialog
                                 hideProgressDialog()
@@ -119,6 +122,10 @@ class SignInActivity : BaseActivity() {
                 .show()
         }
 
+    }
+
+    fun fcmTokenSavedSuccess() {
+        FirestoreHelper().getUserDetails(this@SignInActivity)
     }
 
     /**
@@ -145,6 +152,18 @@ class SignInActivity : BaseActivity() {
             finish()
         }
         finish()
+    }
+
+    private fun retrieveAndStoreToken() {
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+
+                if (task.isSuccessful) {
+                    val token = task.result
+
+
+                }
+            }
     }
 
     private fun validateFields(): Boolean {

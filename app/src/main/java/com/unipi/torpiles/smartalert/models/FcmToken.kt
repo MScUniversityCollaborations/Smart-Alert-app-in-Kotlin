@@ -13,17 +13,10 @@ import java.util.*
 @Keep
 @Parcelize
 @IgnoreExtraProperties
-data class User(
-    val id: String = "",
-    val fullName: String = "",
-    val email: String = "",
-    val phoneNumber: String = "",
-    val phoneCode: Int = 0,
-
+data class FcmToken(
+    var id: String = "",
+    val token: String = "",
     @ServerTimestamp
-    val dateRegistered: Date = Date(),
-    val role: String = "",
-    val notifications: Boolean = true,
-    val profImgUrl: String = "",
-    val profileCompleted: Boolean = false,
+    val dateAdded: Date = Date(),
+    val userId: String = "",
 ) : Parcelable

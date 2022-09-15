@@ -43,7 +43,7 @@ object Constants {
     // Collections
     const val COLLECTION_USERS: String = "users"
     const val COLLECTION_SUBMISSIONS: String = "submissions"
-    const val COLLECTION_ADDRESSES: String = "addresses"
+    const val COLLECTION_FCM_TOKENS: String = "fcm_tokens"
 
     // DB Fields
     // COMMON
@@ -53,6 +53,7 @@ object Constants {
     const val SUBMISSION_IMAGE: String = "SUBMISSION_IMAGE"
     // USER
     const val FIELD_USER_ID: String = "userId"
+    const val FIELD_TOKEN: String = "token"
     const val FIELD_FULL_NAME: String = "fullName"
     const val FIELD_NOTIFICATIONS: String = "notifications"
     const val FIELD_IMG_URL: String = "imgUrl"

@@ -16,7 +16,7 @@ import com.unipi.torpiles.smartalert.ui.activities.SubmissionDetailsActivity
 import com.unipi.torpiles.smartalert.utils.Constants
 
 
-class FirebaseMessagingService : FirebaseMessagingService() {
+class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     /**
      * Called when message is received.
@@ -39,7 +39,7 @@ class FirebaseMessagingService : FirebaseMessagingService() {
         val body = String.format(getString(R.string.notification_payload_fav_body),
             data[Constants.PAYLOAD_SUBMISSION_DESC])
 
-        val resultIntent = Intent(this@FirebaseMessagingService, SubmissionDetailsActivity::class.java).run {
+        val resultIntent = Intent(this@MyFirebaseMessagingService, SubmissionDetailsActivity::class.java).run {
                 putExtra(Constants.EXTRA_SUBMISSION_ID, data[Constants.PAYLOAD_SUBMISSION_ID])
         }
 
@@ -60,7 +60,7 @@ class FirebaseMessagingService : FirebaseMessagingService() {
                 PendingIntent.FLAG_CANCEL_CURRENT
             )*/
 
-        val productImg = Glide.with(this@FirebaseMessagingService)
+        val productImg = Glide.with(this@MyFirebaseMessagingService)
             .asBitmap()
             .load(data[Constants.PAYLOAD_SUBMISSION_IMG_URL])
             .fitCenter()
@@ -70,7 +70,7 @@ class FirebaseMessagingService : FirebaseMessagingService() {
 
         val defaultSoundUri: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 
-        val notification: Notification = NotificationCompat.Builder(this@FirebaseMessagingService, Constants.NOTIFICATION_CHANNEL_ID)
+        val notification: Notification = NotificationCompat.Builder(this@MyFirebaseMessagingService, Constants.NOTIFICATION_CHANNEL_ID)
             .setOngoing(false)
             .setSmallIcon(getNotificationIcon())
             .setAutoCancel(true)
@@ -90,7 +90,7 @@ class FirebaseMessagingService : FirebaseMessagingService() {
             .setColor(getColor(R.color.colorPrimary))
             .setSound(defaultSoundUri).build()
 
-        val notificationManager = this@FirebaseMessagingService.getSystemService(
+        val notificationManager = this@MyFirebaseMessagingService.getSystemService(
             Context.NOTIFICATION_SERVICE
         ) as NotificationManager
 
@@ -149,14 +149,12 @@ class FirebaseMessagingService : FirebaseMessagingService() {
         fun addTokenToFirestore(newRegistrationToken: String) {
             if (newRegistrationToken.isEmpty()) throw NullPointerException("FCM token is null.")
 
-            FirestoreHelper().getFCMRegistrationTokenDB { tokens ->
+            FirestoreHelper().getFCMRegistrationTokenDB(newRegistrationToken) { tokenExists ->
                 // Checking if current token already exists
-                if (tokens.contains(newRegistrationToken))
+                if (tokenExists)
                     return@getFCMRegistrationTokenDB
 
-                tokens.add(newRegistrationToken)
-
-                FirestoreHelper().setFCMRegistrationToken(tokens)
+                FirestoreHelper().addFCMRegistrationToken(newRegistrationToken)
             }
         }
     }

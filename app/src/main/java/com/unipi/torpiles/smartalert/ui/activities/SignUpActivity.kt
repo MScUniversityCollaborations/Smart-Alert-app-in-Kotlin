@@ -175,6 +175,11 @@ class SignUpActivity : BaseActivity() {
      */
     fun userRegistrationSuccess() {
 
+        FirestoreHelper().saveFCMToken(this@SignUpActivity)
+    }
+
+    fun fcmTokenSavedSuccess() {
+
         // Hide the progress dialog
         hideProgressDialog()
 

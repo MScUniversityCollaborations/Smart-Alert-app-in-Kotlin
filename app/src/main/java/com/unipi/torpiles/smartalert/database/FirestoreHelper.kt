@@ -9,8 +9,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.SetOptions
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.unipi.torpiles.smartalert.models.FcmToken
 import com.unipi.torpiles.smartalert.models.Submission
 import com.unipi.torpiles.smartalert.models.User
 import com.unipi.torpiles.smartalert.ui.activities.*
@@ -44,13 +46,24 @@ class FirestoreHelper {
         return currentUserID
     }
 
-    fun getFCMRegistrationTokenDB(onComplete: (tokens: MutableList<String>) -> Unit) {
-        dbFirestore.collection(Constants.COLLECTION_USERS)
-            .document(getCurrentUserID())
+    fun getFCMRegistrationTokenDB(newToken: String,  onComplete: (tokenExists: Boolean) -> Unit) {
+        dbFirestore.collection(Constants.COLLECTION_FCM_TOKENS)
+            .whereEqualTo(Constants.FIELD_TOKEN, newToken)
             .get()
-            .addOnSuccessListener {
-                val user = it.toObject(User::class.java)!!
-                onComplete(user.registrationTokens)
+            .addOnCompleteListener { task ->
+
+                if (task.result!!.isEmpty) {
+                    onComplete(false)
+                    return@addOnCompleteListener
+                }
+                if (task.isSuccessful) {
+                    for (document in task.result!!) {
+                        // Here we get the list of boards in the form of documents.
+                        Log.d("User FCM Tokens List", document.toString())
+
+                        onComplete(true)
+                    }
+                }
             }
             .addOnFailureListener { e ->
                 Log.e(
@@ -61,20 +74,70 @@ class FirestoreHelper {
             }
     }
 
+    fun saveFCMToken(activity: Activity) {
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val token = task.result
+
+                    // Create a model for fcm token.
+                    val fcmTokenModel = FcmToken(
+                        userId = getCurrentUserID(),
+                        token = token
+                    )
+
+                    dbFirestore.collection(Constants.COLLECTION_FCM_TOKENS)
+                        .document()
+                        // Here the fcmTokenModel are Field and the SetOption is set to merge. It is for if we wants to merge later on instead of replacing the fields.
+                        .set(fcmTokenModel, SetOptions.merge())
+                        .addOnSuccessListener {
+                            // Here call a function of base activity for transferring the result to it.
+                            when (activity) {
+                                is SignInActivity -> activity.fcmTokenSavedSuccess()
+                                is SignUpActivity -> activity.fcmTokenSavedSuccess()
+                            }
+                        }
+                        .addOnFailureListener { e ->
+                            when (activity) {
+                                is SignInActivity -> activity.hideProgressDialog()
+                                is SignUpActivity -> activity.hideProgressDialog()
+                            }
+                            Log.e(
+                                activity.javaClass.simpleName,
+                                "Error while registering the user.",
+                                e
+                            )
+                        }
+                }
+            }
+    }
+
     /**
      * A function that gets the registration fcm tokens from the registered user in the FireStore
      * database.
      *
-     * @param registrationTokens todo
+     * @param token String of the reg token of the device.
      */
-    fun setFCMRegistrationToken(registrationTokens: MutableList<String>) {
-        dbFirestore.collection(Constants.COLLECTION_USERS)
-            .document(getCurrentUserID())
-            .update(mapOf(Constants.FIELD_REGISTRATION_TOKENS to registrationTokens))
+    fun addFCMRegistrationToken(token: String) {
+        val fcmTokenModel = FcmToken(
+            userId = getCurrentUserID(),
+            token = token
+        )
+
+        dbFirestore.collection(Constants.COLLECTION_FCM_TOKENS)
+            .document()
+            // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge
+            .set(fcmTokenModel, SetOptions.merge())
+            .addOnSuccessListener {
+                Log.e(
+                    Constants.TAG,
+                    "FCM registration token added!"
+                )
+            }
             .addOnFailureListener { e ->
                 Log.e(
                     Constants.TAG,
-                    "Update of FCM registration tokens failed.",
+                    "Adding FCM registration token failed.",
                     e
                 )
             }
@@ -88,7 +151,7 @@ class FirestoreHelper {
      */
     fun updateProfile(activity: EditProfileActivity, userHashMap: HashMap<String, Any>) {
 
-        dbFirestore.collection(Constants.COLLECTION_ADDRESSES)
+        dbFirestore.collection(Constants.COLLECTION_USERS)
             .document(getCurrentUserID())
             // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge
             .set(userHashMap, SetOptions.merge())
@@ -278,6 +341,39 @@ class FirestoreHelper {
                         // TODO: Show error state maybe
                     }
                 }
+
+                Log.e("Get All Submissions List", "Error while getting submission list.", e)
+            }
+    }
+
+    /**
+     * A function to get all the submissions list from cloud firestore.
+     *
+     */
+    fun getAllSubmissionsList(allSubmissionsFragment: AllSubmissionsFragment) {
+        dbFirestore.collection(Constants.COLLECTION_SUBMISSIONS)
+            .get() // Will get the documents snapshots.
+            .addOnSuccessListener { document ->
+
+                // Here we get the list of boards in the form of documents.
+                Log.d("All Submissions List", document.documents.toString())
+
+                // Here we have created a new instance for Submissions ArrayList.
+                val allSubmissionsList: ArrayList<Submission> = ArrayList()
+
+                // A for loop as per the list of documents to convert them into Submissions ArrayList.
+                for (i in document.documents) {
+
+                    val submission = i.toObject(Submission::class.java)
+                    submission!!.id = i.id
+
+                    allSubmissionsList.add(submission)
+                }
+
+                allSubmissionsFragment.successAllSubmissionsListFromFireStore(allSubmissionsList)
+            }
+            .addOnFailureListener { e ->
+                // Hide the progress dialog if there is any error based on the base class instance.
 
                 Log.e("Get All Submissions List", "Error while getting submission list.", e)
             }

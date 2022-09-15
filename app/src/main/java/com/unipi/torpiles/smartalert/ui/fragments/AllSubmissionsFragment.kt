@@ -31,8 +31,25 @@ class AllSubmissionsFragment : BaseFragment() {
     }
 
     private fun init() {
-        veilRecycler()
-        loadSubmissions()
+
+        // Check if the user is logged in, otherwise show the sign in state.
+        if (FirestoreHelper().getCurrentUserID() == "") {
+            binding.apply {
+                // We make the sign in layout visible and add the button click listeners accordingly.
+                layoutMustBeSignedIn.apply {
+                    root.visibility = View.VISIBLE
+                    btnSignIn.setOnClickListener{ goToSignInActivity(this@AllSubmissionsFragment.requireContext()) }
+                    txtViewSignUp.setOnClickListener{ goToSignUpActivity(this@AllSubmissionsFragment.requireContext()) }
+                }
+            }
+        }
+        else {
+            veilRecycler()
+            loadSubmissions()
+        }
+
+        /*veilRecycler()
+        loadSubmissions()*/
     }
 
     private fun loadSubmissions() {
@@ -45,7 +62,6 @@ class AllSubmissionsFragment : BaseFragment() {
      * @param submissionsList List with submissions.
      */
     fun successAllSubmissionsListFromFireStore(submissionsList: ArrayList<Submission>) {
-
         if (submissionsList.size > 0) {
             binding.veilRecyclerView.visibility = View.VISIBLE
             binding.layoutEmptyState.root.visibility = View.GONE
@@ -54,7 +70,7 @@ class AllSubmissionsFragment : BaseFragment() {
             binding.veilRecyclerView.run {
                 setAdapter(
                     AllSubmissionsListAdapter(
-                        requireActivity(),
+                        requireContext(),
                         submissionsList
                     )
                 )
