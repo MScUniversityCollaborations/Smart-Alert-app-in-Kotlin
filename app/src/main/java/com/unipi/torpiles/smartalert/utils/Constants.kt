@@ -88,6 +88,7 @@ object Constants {
     const val STORAGE_PATH_SUBMISSIONS: String = "Submissions/"
     const val ROLE_MEMBER = "Member"
     const val ROLE_ADMIN = "Admin"
+    const val SUBMISSION_TOPIC = "new_submission_verified"
 
     /**
      * A function for user profile image selection from phone storage.

@@ -156,6 +156,6 @@
         </service>
         <!-- [END firebase_service] -->
 
-        <receiver android:name=".services.NotificationReceiver"/>
+        <!--<receiver android:name=".services.NotificationReceiver"/>-->
     </application>
 </manifest>

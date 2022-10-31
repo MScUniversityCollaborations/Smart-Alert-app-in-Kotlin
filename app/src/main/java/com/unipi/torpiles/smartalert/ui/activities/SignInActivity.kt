@@ -102,6 +102,8 @@ class SignInActivity : BaseActivity() {
                             if (task.isSuccessful) {
                                 // Save token.
 
+                                FirebaseMessaging.getInstance().subscribeToTopic(Constants.SUBMISSION_TOPIC)
+
                                 FirestoreHelper().saveFCMToken(this@SignInActivity)
                             } else {
                                 // Hide the progress dialog
@@ -152,18 +154,6 @@ class SignInActivity : BaseActivity() {
             finish()
         }
         finish()
-    }
-
-    private fun retrieveAndStoreToken() {
-        FirebaseMessaging.getInstance().token
-            .addOnCompleteListener { task ->
-
-                if (task.isSuccessful) {
-                    val token = task.result
-
-
-                }
-            }
     }
 
     private fun validateFields(): Boolean {
